@@ -146,6 +146,19 @@ Input: nums = [1,2,3] Output: 2 Explanation: Only two moves are needed (remember
   <footer class="entry-footer"><span title='2022-06-30 20:29:10 +1000 AEST'>June 30, 2022</span></footer>
   <a class="entry-link" aria-label="post link to Minimum Moves to Equal Array Elements II" href="https://antdon.github.io/algorithms.github.io/posts/minimum-moves-to-equal-array-elements-ii/"></a>
 </article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Queue Reconstruction By Height
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>link to question
+My original solution from itertools import permutations class Solution: def reconstructQueue(self, people: List[List[int]]) -&gt; List[List[int]]: # length is only 2000 so we can viably just check that it hold and try every perm for permutation in permutations(people): if self.constructed(permutation): return permutation return [] def constructed(self, people: List[List[int]]) -&gt; bool: for index, (person, smaller) in enumerate(people): count = 0 for i in range(index): if people[i][0] &gt;= person: count &#43;= 1 if count !...</p>
+  </div>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to Queue Reconstruction By Height" href="https://antdon.github.io/algorithms.github.io/posts/queue-reconstruction-by-height/"></a>
+</article>
     </main>
     
 <footer class="footer">

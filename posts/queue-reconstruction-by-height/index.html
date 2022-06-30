@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Queue Reconstruction By Height | Anton&#39;s Algorithms</title>
+<meta name="keywords" content="">
+<meta name="description" content="link to question
+My original solution from itertools import permutations class Solution: def reconstructQueue(self, people: List[List[int]]) -&gt; List[List[int]]: # length is only 2000 so we can viably just check that it hold and try every perm for permutation in permutations(people): if self.constructed(permutation): return permutation return [] def constructed(self, people: List[List[int]]) -&gt; bool: for index, (person, smaller) in enumerate(people): count = 0 for i in range(index): if people[i][0] &gt;= person: count &#43;= 1 if count !">
+<meta name="author" content="">
+<link rel="canonical" href="https://antdon.github.io/algorithms.github.io/posts/queue-reconstruction-by-height/">
+<link crossorigin="anonymous" href="/algorithms.github.io/assets/css/stylesheet.41f2d211c00e636a3c229c52ef2d4299a66891ae66771098993b13bca7972ae6.css" integrity="sha256-QfLSEcAOY2o8IpxS7y1CmaZoka5mdxCYmTsTvKeXKuY=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/algorithms.github.io/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://antdon.github.io/algorithms.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://antdon.github.io/algorithms.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://antdon.github.io/algorithms.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://antdon.github.io/algorithms.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://antdon.github.io/algorithms.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Queue Reconstruction By Height" />
+<meta property="og:description" content="link to question
+My original solution from itertools import permutations class Solution: def reconstructQueue(self, people: List[List[int]]) -&gt; List[List[int]]: # length is only 2000 so we can viably just check that it hold and try every perm for permutation in permutations(people): if self.constructed(permutation): return permutation return [] def constructed(self, people: List[List[int]]) -&gt; bool: for index, (person, smaller) in enumerate(people): count = 0 for i in range(index): if people[i][0] &gt;= person: count &#43;= 1 if count !" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://antdon.github.io/algorithms.github.io/posts/queue-reconstruction-by-height/" /><meta property="article:section" content="posts" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Queue Reconstruction By Height"/>
+<meta name="twitter:description" content="link to question
+My original solution from itertools import permutations class Solution: def reconstructQueue(self, people: List[List[int]]) -&gt; List[List[int]]: # length is only 2000 so we can viably just check that it hold and try every perm for permutation in permutations(people): if self.constructed(permutation): return permutation return [] def constructed(self, people: List[List[int]]) -&gt; bool: for index, (person, smaller) in enumerate(people): count = 0 for i in range(index): if people[i][0] &gt;= person: count &#43;= 1 if count !"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Queue Reconstruction By Height",
+      "item": "https://antdon.github.io/algorithms.github.io/posts/queue-reconstruction-by-height/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Queue Reconstruction By Height",
+  "name": "Queue Reconstruction By Height",
+  "description": "link to question\nMy original solution from itertools import permutations class Solution: def reconstructQueue(self, people: List[List[int]]) -\u0026gt; List[List[int]]: # length is only 2000 so we can viably just check that it hold and try every perm for permutation in permutations(people): if self.constructed(permutation): return permutation return [] def constructed(self, people: List[List[int]]) -\u0026gt; bool: for index, (person, smaller) in enumerate(people): count = 0 for i in range(index): if people[i][0] \u0026gt;= person: count += 1 if count !",
+  "keywords": [
+    
+  ],
+  "articleBody": "link to question\nMy original solution from itertools import permutations class Solution: def reconstructQueue(self, people: List[List[int]]) - List[List[int]]: # length is only 2000 so we can viably just check that it hold and try every perm for permutation in permutations(people): if self.constructed(permutation): return permutation return [] def constructed(self, people: List[List[int]]) - bool: for index, (person, smaller) in enumerate(people): count = 0 for i in range(index): if people[i][0] = person: count += 1 if count != smaller: return False return True Essentially this solution works by creating a check to see if the list is constructed and then checking every permutation. I thought I could do this because len(people) is only 2000 but in reality this was far too slow.\nY’s solution class Solution: def reconstructQueue(self, people: List[List[int]]) - List[List[int]]: people.sort(key=lambda p: (-p[0], p[1])) res = [] for [height, order] in people: res = res[:order] + [[height, order]] + res[order:] return res So here y’s sort is interesting in my opinion. How she explained it was that the sort function applies a map to the list with the key univariat function as the maps function. It then sorts it and unmaps it. This is super powerful. So she is making reverse sorting by the first index and then regular sorting by the second index. This works because tuples are sorted by the first element first.\nBeautiful solution from discussion class Solution: def reconstructQueue(self,A): A.sort( key = lambda x: ( -x[0] , x[1] ) ) B = [] for (h,k) in A: B.insert( k , (h,k) ) return B This solution uses Y’s sort thing. Then it inserts based on the second argument which is supposed to be the number of values smaller than it. Python pushes the value at the index you are inserting in to the right. Your allowed to do this because when you are inserting an element into the list all the elements currently in the list have a larger h value. Thus, when they look left they will see the same number of elements that have greater h’s than them. This took me awhile to wrap my head around. If you don’t understand after reading the above code snippit a few times I suggest you draw out an example to prove to yourself that this works.\n",
+  "wordCount" : "379",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://antdon.github.io/algorithms.github.io/posts/queue-reconstruction-by-height/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Anton's Algorithms",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://antdon.github.io/algorithms.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://antdon.github.io/algorithms.github.io/" accesskey="h" title="Anton&#39;s Algorithms (Alt + H)">Anton&#39;s Algorithms</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Queue Reconstruction By Height
+    </h1>
+    <div class="post-meta">
+
+</div>
+  </header> 
+  <div class="post-content"><p><a href="https://leetcode.com/problems/queue-reconstruction-by-height/">link to question</a></p>
+<h2 id="my-original-solution">My original solution<a hidden class="anchor" aria-hidden="true" href="#my-original-solution">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> itertools <span style="color:#f92672">import</span> permutations
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reconstructQueue</span>(self, people: List[List[int]]) <span style="color:#f92672">-&gt;</span> List[List[int]]:
+        <span style="color:#75715e"># length is only 2000 so we can viably just check that it hold and try every perm</span>
+        <span style="color:#66d9ef">for</span> permutation <span style="color:#f92672">in</span> permutations(people):
+            <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>constructed(permutation):
+                <span style="color:#66d9ef">return</span> permutation
+        <span style="color:#66d9ef">return</span> []
+    
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">constructed</span>(self, people: List[List[int]]) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#66d9ef">for</span> index, (person, smaller) <span style="color:#f92672">in</span> enumerate(people):
+            count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(index):
+                <span style="color:#66d9ef">if</span> people[i][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&gt;=</span> person:
+                    count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                    
+            <span style="color:#66d9ef">if</span> count <span style="color:#f92672">!=</span> smaller:
+                <span style="color:#66d9ef">return</span> False
+        <span style="color:#66d9ef">return</span> True
+
+</code></pre></div><p>Essentially this solution works by creating a check to see if the list is constructed and then checking every permutation. I thought I could do this because len(people) is only 2000 but in reality this was far too slow.</p>
+<h2 id="ys-solution">Y&rsquo;s solution<a hidden class="anchor" aria-hidden="true" href="#ys-solution">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>: 
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reconstructQueue</span>(self, people: List[List[int]]) <span style="color:#f92672">-&gt;</span> List[List[int]]: 
+people<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> p: (<span style="color:#f92672">-</span>p[<span style="color:#ae81ff">0</span>], p[<span style="color:#ae81ff">1</span>])) 
+res <span style="color:#f92672">=</span> [] 
+<span style="color:#66d9ef">for</span> [height, order] <span style="color:#f92672">in</span> people:
+res <span style="color:#f92672">=</span> res[:order] <span style="color:#f92672">+</span> [[height, order]] <span style="color:#f92672">+</span> res[order:] 
+<span style="color:#66d9ef">return</span> res
+</code></pre></div><p>So here y&rsquo;s sort is interesting in my opinion. How she explained it was that the sort function applies a map to the list with the key univariat function as the maps function. It then sorts it and unmaps it. This is super powerful. So she is making reverse sorting by the first index and then regular sorting by the second index. This works because tuples are sorted by the first element first.</p>
+<h2 id="beautiful-solution-from-discussion">Beautiful solution from discussion<a hidden class="anchor" aria-hidden="true" href="#beautiful-solution-from-discussion">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reconstructQueue</span>(self,A):
+        A<span style="color:#f92672">.</span>sort( key <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> x: ( <span style="color:#f92672">-</span>x[<span style="color:#ae81ff">0</span>] , x[<span style="color:#ae81ff">1</span>] ) ) 
+        B <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">for</span> (h,k) <span style="color:#f92672">in</span> A:
+            B<span style="color:#f92672">.</span>insert( k , (h,k) )
+        <span style="color:#66d9ef">return</span> B
+
+</code></pre></div><p>This solution uses Y&rsquo;s sort thing. Then it inserts based on the second argument which is supposed to be the number of values smaller than it.  Python pushes the value at the index you are inserting in to the right. Your allowed to do this because when you are inserting an element into the list all the elements currently in the list have a larger h value. Thus, when they look left they will see the same number of elements that have greater h&rsquo;s than them. This took me awhile to wrap my head around. If you don&rsquo;t understand after reading the above code snippit a few times I suggest you draw out an example to prove to yourself that this works.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://antdon.github.io/algorithms.github.io/">Anton&#39;s Algorithms</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
