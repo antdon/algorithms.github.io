@@ -62,8 +62,8 @@ My original solution from itertools import permutations class Solution: def reco
 My original solution from itertools import permutations class Solution: def reconstructQueue(self, people: List[List[int]]) -&gt; List[List[int]]: # length is only 2000 so we can viably just check that it hold and try every perm for permutation in permutations(people): if self.constructed(permutation): return permutation return [] def constructed(self, people: List[List[int]]) -&gt; bool: for index, (person, smaller) in enumerate(people): count = 0 for i in range(index): if people[i][0] &gt;= person: count &#43;= 1 if count !" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://antdon.github.io/algorithms.github.io/posts/queue-reconstruction-by-height/" /><meta property="article:section" content="posts" />
-
-
+<meta property="article:published_time" content="2022-06-29T20:29:10&#43;10:00" />
+<meta property="article:modified_time" content="2022-06-29T20:29:10&#43;10:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Queue Reconstruction By Height"/>
@@ -98,8 +98,8 @@ My original solution from itertools import permutations class Solution: def reco
   "articleBody": "link to question\nMy original solution from itertools import permutations class Solution: def reconstructQueue(self, people: List[List[int]]) - List[List[int]]: # length is only 2000 so we can viably just check that it hold and try every perm for permutation in permutations(people): if self.constructed(permutation): return permutation return [] def constructed(self, people: List[List[int]]) - bool: for index, (person, smaller) in enumerate(people): count = 0 for i in range(index): if people[i][0] = person: count += 1 if count != smaller: return False return True Essentially this solution works by creating a check to see if the list is constructed and then checking every permutation. I thought I could do this because len(people) is only 2000 but in reality this was far too slow.\nY’s solution class Solution: def reconstructQueue(self, people: List[List[int]]) - List[List[int]]: people.sort(key=lambda p: (-p[0], p[1])) res = [] for [height, order] in people: res = res[:order] + [[height, order]] + res[order:] return res So here y’s sort is interesting in my opinion. How she explained it was that the sort function applies a map to the list with the key univariat function as the maps function. It then sorts it and unmaps it. This is super powerful. So she is making reverse sorting by the first index and then regular sorting by the second index. This works because tuples are sorted by the first element first.\nBeautiful solution from discussion class Solution: def reconstructQueue(self,A): A.sort( key = lambda x: ( -x[0] , x[1] ) ) B = [] for (h,k) in A: B.insert( k , (h,k) ) return B This solution uses Y’s sort thing. Then it inserts based on the second argument which is supposed to be the number of values smaller than it. Python pushes the value at the index you are inserting in to the right. Your allowed to do this because when you are inserting an element into the list all the elements currently in the list have a larger h value. Thus, when they look left they will see the same number of elements that have greater h’s than them. This took me awhile to wrap my head around. If you don’t understand after reading the above code snippit a few times I suggest you draw out an example to prove to yourself that this works.\n",
   "wordCount" : "379",
   "inLanguage": "en",
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
+  "datePublished": "2022-06-29T20:29:10+10:00",
+  "dateModified": "2022-06-29T20:29:10+10:00",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://antdon.github.io/algorithms.github.io/posts/queue-reconstruction-by-height/"
@@ -167,7 +167,7 @@ My original solution from itertools import permutations class Solution: def reco
     <h1 class="post-title">
       Queue Reconstruction By Height
     </h1>
-    <div class="post-meta">
+    <div class="post-meta"><span title='2022-06-29 20:29:10 +1000 AEST'>June 29, 2022</span>
 
 </div>
   </header> 
