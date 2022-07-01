@@ -15,11 +15,11 @@
     
     
     <item>
-      <title>Minimum Moves to Equal Array Elements II</title>
-      <link>https://antdon.github.io/algorithms.github.io/posts/minimum-moves-to-equal-array-elements-ii/</link>
+      <title>Maximum Units on a Truck</title>
+      <link>https://antdon.github.io/algorithms.github.io/posts/maximum-units-on-a-truck/</link>
       <pubDate>Fri, 01 Jul 2022 12:17:07 +1000</pubDate>
       
-      <guid>https://antdon.github.io/algorithms.github.io/posts/minimum-moves-to-equal-array-elements-ii/</guid>
+      <guid>https://antdon.github.io/algorithms.github.io/posts/maximum-units-on-a-truck/</guid>
       <description>
         
           
@@ -28,11 +28,9 @@
         
         
         
-          Question: Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.
-In one move, you can increment or decrement an element of the array by 1.
-Test cases are designed so that the answer will fit in a 32-bit integer.
-Example 1:
-Input: nums = [1,2,3] Output: 2 Explanation: Only two moves are needed (remember each move increments or decrements one element): [1,2,3] =&amp;gt; [2,2,3] =&amp;gt; [2,2,2]
+          link to question
+Question explanation So the question is asking us to maximize the number of units in a set number of boxes. Boxes have a variable capacity. But the truck can fit a set number of boxes with any capacity. This is stupid in my opinion because a larger capacity box would most likely take up more space in the truck.
+My Original Solution When we read that we need to maximize a variable there is a high chance that we need to use a sort function.
           
         
         </description>
@@ -60,11 +58,11 @@ My original solution from itertools import permutations class Solution: def reco
     </item>
     
     <item>
-      <title>Maximum Units on a Truck</title>
-      <link>https://antdon.github.io/algorithms.github.io/posts/maximum-units-on-a-truck/</link>
+      <title>Minimum Moves to Equal Array Elements II</title>
+      <link>https://antdon.github.io/algorithms.github.io/posts/minimum-moves-to-equal-array-elements-ii/</link>
       <pubDate>Wed, 01 Jun 2022 20:29:10 +1000</pubDate>
       
-      <guid>https://antdon.github.io/algorithms.github.io/posts/maximum-units-on-a-truck/</guid>
+      <guid>https://antdon.github.io/algorithms.github.io/posts/minimum-moves-to-equal-array-elements-ii/</guid>
       <description>
         
           
@@ -73,9 +71,11 @@ My original solution from itertools import permutations class Solution: def reco
         
         
         
-          link to question
-Question explanation So the question is asking us to maximize the number of units in a set number of boxes. Boxes have a variable capacity. But the truck can fit a set number of boxes with any capacity. This is stupid in my opinion because a larger capacity box would most likely take up more space in the truck.
-My Original Solution When we read that we need to maximize a variable there is a high chance that we need to use a sort function.
+          Question: Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.
+In one move, you can increment or decrement an element of the array by 1.
+Test cases are designed so that the answer will fit in a 32-bit integer.
+Example 1:
+Input: nums = [1,2,3] Output: 2 Explanation: Only two moves are needed (remember each move increments or decrements one element): [1,2,3] =&amp;gt; [2,2,3] =&amp;gt; [2,2,2]
           
         
         </description>
