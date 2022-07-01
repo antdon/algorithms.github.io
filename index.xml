@@ -9,7 +9,7 @@
     <description>Recent content on Anton&#39;s Daily Algorithm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jun 2022 20:29:10 +1000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Jul 2022 12:17:07 +1000</lastBuildDate>
     
 	<atom:link href="https://antdon.github.io/algorithms.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,7 +17,7 @@
     <item>
       <title>Minimum Moves to Equal Array Elements II</title>
       <link>https://antdon.github.io/algorithms.github.io/posts/minimum-moves-to-equal-array-elements-ii/</link>
-      <pubDate>Thu, 30 Jun 2022 20:29:10 +1000</pubDate>
+      <pubDate>Fri, 01 Jul 2022 12:17:07 +1000</pubDate>
       
       <guid>https://antdon.github.io/algorithms.github.io/posts/minimum-moves-to-equal-array-elements-ii/</guid>
       <description>
@@ -54,6 +54,28 @@ Input: nums = [1,2,3] Output: 2 Explanation: Only two moves are needed (remember
         
           link to question
 My original solution from itertools import permutations class Solution: def reconstructQueue(self, people: List[List[int]]) -&amp;gt; List[List[int]]: # length is only 2000 so we can viably just check that it hold and try every perm for permutation in permutations(people): if self.constructed(permutation): return permutation return [] def constructed(self, people: List[List[int]]) -&amp;gt; bool: for index, (person, smaller) in enumerate(people): count = 0 for i in range(index): if people[i][0] &amp;gt;= person: count += 1 if count !
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Maximum Units on a Truck</title>
+      <link>https://antdon.github.io/algorithms.github.io/posts/maximum-units-on-a-truck/</link>
+      <pubDate>Wed, 01 Jun 2022 20:29:10 +1000</pubDate>
+      
+      <guid>https://antdon.github.io/algorithms.github.io/posts/maximum-units-on-a-truck/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          link to question
+Question explanation So the question is asking us to maximize the number of units in a set number of boxes. Boxes have a variable capacity. But the truck can fit a set number of boxes with any capacity. This is stupid in my opinion because a larger capacity box would most likely take up more space in the truck.
+My Original Solution When we read that we need to maximize a variable there is a high chance that we need to use a sort function.
           
         
         </description>
