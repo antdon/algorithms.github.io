@@ -152,8 +152,8 @@ Initial Thoughts At first glance the only thing that makes this problem non-triv
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">nums <span style="color:#f92672">=</span> set(nums)
 </code></pre></div><p>This gives us two advantages. Sets have fewer elements in them than lists as all duplicates have been removed and all set operations can be done in O(1) time as a concequence of the hashing protocol that sets use. You can read more about that <a href="https://wiki.python.org/moin/TimeComplexity">here</a>.
 However, if we have a list in reverse order and we check the sublist starting on each element we will end up having to go through the elements n^2 times.<br>
-The answer is to check if an element is the start of a consecutive sequence or within one. If it&rsquo;s the start we can find the length of the sequence it begins but if it is isn&rsquo;t the start we can just move to the next element.
-Each time we should compare the length of our consecutive sequence with our longest so far and replace it with that element.</p>
+The answer is to check if an element is the start of a consecutive sequence or within one. If it&rsquo;s the start we can find the length of the sequence the element begins, if not we can move to the next element.
+Each time we should compare the length of our consecutive sequence with our longest sequence so far and update our longest variable.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">longestConsecutive</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> int:
         nums <span style="color:#f92672">=</span> set(nums)
