@@ -5,21 +5,21 @@
     
     
     
-    <link>https://antdon.github.io/algorithms.github.io/posts/</link>
+    <link>https://antdon.me/posts/</link>
     <description>Recent content in Posts on Anton&#39;s Daily Algorithm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 06 Jul 2022 16:52:11 +1000</lastBuildDate>
     
-	<atom:link href="https://antdon.github.io/algorithms.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://antdon.me/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fibbonacci Numbers</title>
-      <link>https://antdon.github.io/algorithms.github.io/posts/fibbonacci-number/</link>
+      <link>https://antdon.me/posts/fibbonacci-number/</link>
       <pubDate>Wed, 06 Jul 2022 16:52:11 +1000</pubDate>
       
-      <guid>https://antdon.github.io/algorithms.github.io/posts/fibbonacci-number/</guid>
+      <guid>https://antdon.me/posts/fibbonacci-number/</guid>
       <description>
         
           
@@ -39,10 +39,10 @@ if n == 0: return 0 elif n == 1: return 1 These are our stop conditions.
     
     <item>
       <title>Longest Consecutive Sequence</title>
-      <link>https://antdon.github.io/algorithms.github.io/posts/longest-consecutive-sequence/</link>
+      <link>https://antdon.me/posts/longest-consecutive-sequence/</link>
       <pubDate>Tue, 05 Jul 2022 16:21:42 +1000</pubDate>
       
-      <guid>https://antdon.github.io/algorithms.github.io/posts/longest-consecutive-sequence/</guid>
+      <guid>https://antdon.me/posts/longest-consecutive-sequence/</guid>
       <description>
         
           
@@ -60,10 +60,10 @@ Initial Thoughts At first glance the only thing that makes this problem non-triv
     
     <item>
       <title>Maximum Units on a Truck</title>
-      <link>https://antdon.github.io/algorithms.github.io/posts/maximum-units-on-a-truck/</link>
+      <link>https://antdon.me/posts/maximum-units-on-a-truck/</link>
       <pubDate>Fri, 01 Jul 2022 12:17:07 +1000</pubDate>
       
-      <guid>https://antdon.github.io/algorithms.github.io/posts/maximum-units-on-a-truck/</guid>
+      <guid>https://antdon.me/posts/maximum-units-on-a-truck/</guid>
       <description>
         
           
@@ -82,10 +82,10 @@ My Original Solution When we read that we need to maximize a variable there is a
     
     <item>
       <title>Queue Reconstruction By Height</title>
-      <link>https://antdon.github.io/algorithms.github.io/posts/queue-reconstruction-by-height/</link>
+      <link>https://antdon.me/posts/queue-reconstruction-by-height/</link>
       <pubDate>Wed, 29 Jun 2022 20:29:10 +1000</pubDate>
       
-      <guid>https://antdon.github.io/algorithms.github.io/posts/queue-reconstruction-by-height/</guid>
+      <guid>https://antdon.me/posts/queue-reconstruction-by-height/</guid>
       <description>
         
           
@@ -103,10 +103,10 @@ My original solution from itertools import permutations class Solution: def reco
     
     <item>
       <title>Minimum Moves to Equal Array Elements II</title>
-      <link>https://antdon.github.io/algorithms.github.io/posts/minimum-moves-to-equal-array-elements-ii/</link>
+      <link>https://antdon.me/posts/minimum-moves-to-equal-array-elements-ii/</link>
       <pubDate>Wed, 01 Jun 2022 20:29:10 +1000</pubDate>
       
-      <guid>https://antdon.github.io/algorithms.github.io/posts/minimum-moves-to-equal-array-elements-ii/</guid>
+      <guid>https://antdon.me/posts/minimum-moves-to-equal-array-elements-ii/</guid>
       <description>
         
           
