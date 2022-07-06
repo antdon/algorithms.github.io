@@ -3,7 +3,7 @@
   <head>
     
       <title>
-        Posts ::
+        code ::
         Anton&#39;s Daily Algorithm — A simple theme for Hugo
       </title>
     
@@ -18,7 +18,7 @@
   content=""
 />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://antdon.github.io/algorithms.github.io/posts/" />
+<link rel="canonical" href="https://antdon.github.io/algorithms.github.io/tags/code/" />
 
 
 
@@ -46,20 +46,20 @@
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:title" content="code"/>
 <meta name="twitter:description" content=""/>
 
 
 
-<meta property="og:title" content="Posts" />
+<meta property="og:title" content="code" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://antdon.github.io/algorithms.github.io/posts/" />
+<meta property="og:url" content="https://antdon.github.io/algorithms.github.io/tags/code/" />
 <meta property="og:updated_time" content="2022-07-06T16:52:11+10:00" /><meta property="og:site_name" content="Anton&#39;s Daily Algorithm" />
 
 
 
-<link rel="alternate" type="application/rss+xml" href="/algorithms.github.io/posts/index.xml" title="Anton's Daily Algorithm" />
+<link rel="alternate" type="application/rss+xml" href="/algorithms.github.io/tags/code/index.xml" title="Anton's Daily Algorithm" />
 
 
 
@@ -154,158 +154,6 @@ if n == 0: return 0 elif n == 1: return 1 These are our stop conditions.
         
           <div>
             <a class="read-more button" href="/algorithms.github.io/posts/fibbonacci-number/"
-              >Read more →</a
-            >
-          </div>
-        
-      </div>
-    
-      <div class="post on-list">
-        <h1 class="post-title"><a href="https://antdon.github.io/algorithms.github.io/posts/longest-consecutive-sequence/">Longest Consecutive Sequence</a></h1>
-        <div class="post-meta">
-          
-            <span class="post-date">
-              2022-07-05
-            </span>
-
-            
-          
-          
-
-
-          
-        </div>
-
-        
-
-        
-
-        <div class="post-content">
-          
-            
-              Longest Consecutive Sequence Problem Explanation The question provides you with an unsorted array and you need to find the longest consecutive sequence within it. This sequence can appear not in order. Furthermore, the question states that we need to do this in O(n) time.
-Initial Thoughts At first glance the only thing that makes this problem non-trivial is the time requirement. O(n). Sorting the list would make the question much easier but since that is a O(nlogn) operation that is not an option.
-            
-          
-        </div>
-        
-          <div>
-            <a class="read-more button" href="/algorithms.github.io/posts/longest-consecutive-sequence/"
-              >Read more →</a
-            >
-          </div>
-        
-      </div>
-    
-      <div class="post on-list">
-        <h1 class="post-title"><a href="https://antdon.github.io/algorithms.github.io/posts/maximum-units-on-a-truck/">Maximum Units on a Truck</a></h1>
-        <div class="post-meta">
-          
-            <span class="post-date">
-              2022-07-01
-            </span>
-
-            
-          
-          
-
-
-          
-        </div>
-
-        
-
-        
-
-        <div class="post-content">
-          
-            
-              link to question
-Question explanation So the question is asking us to maximize the number of units in a set number of boxes. Boxes have a variable capacity. But the truck can fit a set number of boxes with any capacity. This is stupid in my opinion because a larger capacity box would most likely take up more space in the truck.
-My Original Solution When we read that we need to maximize a variable there is a high chance that we need to use a sort function.
-            
-          
-        </div>
-        
-          <div>
-            <a class="read-more button" href="/algorithms.github.io/posts/maximum-units-on-a-truck/"
-              >Read more →</a
-            >
-          </div>
-        
-      </div>
-    
-      <div class="post on-list">
-        <h1 class="post-title"><a href="https://antdon.github.io/algorithms.github.io/posts/queue-reconstruction-by-height/">Queue Reconstruction By Height</a></h1>
-        <div class="post-meta">
-          
-            <span class="post-date">
-              2022-06-29
-            </span>
-
-            
-          
-          
-
-
-          
-        </div>
-
-        
-
-        
-
-        <div class="post-content">
-          
-            
-              link to question
-My original solution from itertools import permutations class Solution: def reconstructQueue(self, people: List[List[int]]) -&gt; List[List[int]]: # length is only 2000 so we can viably just check that it hold and try every perm for permutation in permutations(people): if self.constructed(permutation): return permutation return [] def constructed(self, people: List[List[int]]) -&gt; bool: for index, (person, smaller) in enumerate(people): count = 0 for i in range(index): if people[i][0] &gt;= person: count += 1 if count !
-            
-          
-        </div>
-        
-          <div>
-            <a class="read-more button" href="/algorithms.github.io/posts/queue-reconstruction-by-height/"
-              >Read more →</a
-            >
-          </div>
-        
-      </div>
-    
-      <div class="post on-list">
-        <h1 class="post-title"><a href="https://antdon.github.io/algorithms.github.io/posts/minimum-moves-to-equal-array-elements-ii/">Minimum Moves to Equal Array Elements II</a></h1>
-        <div class="post-meta">
-          
-            <span class="post-date">
-              2022-06-01
-            </span>
-
-            
-          
-          
-
-
-          
-        </div>
-
-        
-
-        
-
-        <div class="post-content">
-          
-            
-              Question: Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.
-In one move, you can increment or decrement an element of the array by 1.
-Test cases are designed so that the answer will fit in a 32-bit integer.
-Example 1:
-Input: nums = [1,2,3] Output: 2 Explanation: Only two moves are needed (remember each move increments or decrements one element): [1,2,3] =&gt; [2,2,3] =&gt; [2,2,2]
-            
-          
-        </div>
-        
-          <div>
-            <a class="read-more button" href="/algorithms.github.io/posts/minimum-moves-to-equal-array-elements-ii/"
               >Read more →</a
             >
           </div>

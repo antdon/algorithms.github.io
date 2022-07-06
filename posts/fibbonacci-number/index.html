@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>
+        Fibbonacci Numbers ::
+        Anton&#39;s Daily Algorithm — A simple theme for Hugo
+      </title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="Fibbonacci Numbers link to problem
+Problem explanation The problem is asking us to return the respective fibbonacci number of the input. Where the output should be given by the function f(0) = 0, f(1) = 1, f(n) = f(n-1) &#43; f(n-2).
+Solution This is a common example of a problem that is best solved using recursion. We start by defining our base cases.
+if n == 0: return 0 elif n == 1: return 1 These are our stop conditions."
+/>
+<meta
+  name="keywords"
+  content=""
+/>
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://antdon.github.io/algorithms.github.io/posts/fibbonacci-number/" />
+
+
+
+
+
+<link rel="stylesheet" href="https://antdon.github.io/algorithms.github.io/assets/style.css" />
+
+<link rel="stylesheet" href="https://antdon.github.io/algorithms.github.io/style.css" />
+
+
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="https://antdon.github.io/algorithms.github.io/img/apple-touch-icon-144-precomposed.png"
+/>
+<link rel="shortcut icon" href="https://antdon.github.io/algorithms.github.io/img/favicon.png" />
+
+
+<link href="https://antdon.github.io/algorithms.github.io/assets/fonts/Inter-Italic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://antdon.github.io/algorithms.github.io/assets/fonts/Inter-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://antdon.github.io/algorithms.github.io/assets/fonts/Inter-Medium.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://antdon.github.io/algorithms.github.io/assets/fonts/Inter-MediumItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://antdon.github.io/algorithms.github.io/assets/fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://antdon.github.io/algorithms.github.io/assets/fonts/Inter-BoldItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Fibbonacci Numbers"/>
+<meta name="twitter:description" content="Fibbonacci Numbers link to problem
+Problem explanation The problem is asking us to return the respective fibbonacci number of the input. Where the output should be given by the function f(0) = 0, f(1) = 1, f(n) = f(n-1) &#43; f(n-2).
+Solution This is a common example of a problem that is best solved using recursion. We start by defining our base cases.
+if n == 0: return 0 elif n == 1: return 1 These are our stop conditions."/>
+
+
+
+<meta property="og:title" content="Fibbonacci Numbers" />
+<meta property="og:description" content="Fibbonacci Numbers link to problem
+Problem explanation The problem is asking us to return the respective fibbonacci number of the input. Where the output should be given by the function f(0) = 0, f(1) = 1, f(n) = f(n-1) &#43; f(n-2).
+Solution This is a common example of a problem that is best solved using recursion. We start by defining our base cases.
+if n == 0: return 0 elif n == 1: return 1 These are our stop conditions." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://antdon.github.io/algorithms.github.io/posts/fibbonacci-number/" />
+<meta property="article:published_time" content="2022-07-06T16:52:11+10:00" />
+<meta property="article:modified_time" content="2022-07-06T16:52:11+10:00" /><meta property="og:site_name" content="Anton&#39;s Daily Algorithm" />
+
+
+
+
+
+
+  </head>
+  <body class="light-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a
+  href="https://antdon.github.io/algorithms.github.io/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >Anton&#39;s Algorithims</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+      <span class="theme-toggle">
+        <svg
+  class="theme-toggler"
+  width="24"
+  height="24"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h1 class="post-title">Fibbonacci Numbers</h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2022-07-06
+        </span>
+
+        
+          
+        
+      
+
+      
+
+
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          <a href="https://antdon.github.io/algorithms.github.io/tags/algorithms/">#algorithms</a>&nbsp;
+        
+          <a href="https://antdon.github.io/algorithms.github.io/tags/code/">#code</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+      <h1 id="fibbonacci-numbers">Fibbonacci Numbers</h1>
+<p><a href="https://leetcode.com/problems/fibonacci-number/">link to problem</a></p>
+<h2 id="problem-explanation">Problem explanation</h2>
+<p>The problem is asking us to return the respective fibbonacci number of the input. Where the output should be given by the function f(0) = 0, f(1) = 1, f(n) = f(n-1) + f(n-2).</p>
+<h2 id="solution">Solution</h2>
+<p>This is a common example of a problem that is best solved using recursion. We start by defining our base cases.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+<span style="color:#66d9ef">elif</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+</code></pre></div><p>These are our stop conditions. The bottom of the tower of recursive calls that we are building.
+Next we want to do our recursive case that is essentially spelt out in the problem statement.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">else</span>:
+	<span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>fib(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>fib(n<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>)
+</code></pre></div><p>Here we are calling fib inside of fib. But each time we are reducing n and hence we will eventually hit our base case. This works by building up slowly take n = 7 for example</p>
+<p>fib(7) = fib(6) + fib(5)
+fib(7) = (fib(5) + fib(3)) + (fib(4) + fib(2))
+fib(7) = ((fib(4) + fib(3)) + fib(2) + fib(1)) + ((fib(3) + fib(2)) + (fib(1) + fib(0)))
+&hellip;</p>
+<p>I&rsquo;m sure I&rsquo;ve already messed up my bracktes but I&rsquo;m sure you can see the pattern. Each fib call breaks into two more fib calls with smaller n values until it eventually reaches either fib(1) or fib(0). When we reach these base cases we can sub in 1 and 0 respectively and finally do our addition.
+Gaining a intuition for writing such algorithms is tricky and will take time but as long as you first define the base case and then make sure that the recursive case is reducing each time you can trust that your algorithm will eventually resolve.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fib</span>(self, n: int) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">elif</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>fib(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>fib(n<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>)
+</code></pre></div><h2 id="optimisation">Optimisation</h2>
+<p>If we look at the example of fib(7) above we can see that many numbers are repeated. In the last line I attempted fib(3) occurs twice. Each time we are breaking fib(3) up into fin(2) and fib(1) although we have already done this computation. Essentially if we could store the values that we have already calculated we could only have to calculate them once and then we can reuse them.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fib</span>(self, n: int) <span style="color:#f92672">-&gt;</span> int:
+        hash_map <span style="color:#f92672">=</span>{}
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(n):
+            <span style="color:#66d9ef">if</span>(hash_map<span style="color:#f92672">.</span>get(n,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">!=-</span><span style="color:#ae81ff">1</span>):
+                <span style="color:#66d9ef">return</span> hash_map[n]
+            
+            <span style="color:#66d9ef">if</span>(n<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> n<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>):
+                hash_map[n] <span style="color:#f92672">=</span> n
+                <span style="color:#66d9ef">return</span> hash_map[n]
+            
+            hash_map[n] <span style="color:#f92672">=</span> f(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">+</span>f(n<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>)
+            
+            <span style="color:#66d9ef">return</span> hash_map[n]
+        <span style="color:#66d9ef">return</span> f(n)
+</code></pre></div><p>The below code stores them in a hashtable. It first declares the hashtable and then its recursive helper function. Each iteration it first checks if the value is stored in the table.</p>
+<p><em>This is done with some fun syntax where the second argument of get is a default value that is returned if the value is not found in the table. Hence get(n, -1) checks if n is in the hashmap and if not it returns -1, a value that could not be returned by any n).</em></p>
+<p>Then it checks for base cases. And finally the recursive call, however this time assigning the recursive calls value to the value of n in their hashmap so that they look it up if the need it again later. It&rsquo;s important to understand that hashmaps have O(1) lookup in the average case, you can read more about that <a href="https://computersciencehub.io/python/python-dictionary-time-complexity/">here</a>.</p>
+<p>This type of saving the values of recursive calls is a common operation and is needed to speed up a lot of functional programming. So the good folks who make python created a handy decorator that you can add to your regular shmegular functions.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> functools
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#a6e22e">@functools.cache</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fib</span>(self, n: int) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">elif</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>fib(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>fib(n<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>)
+</code></pre></div><p>This function will perform aprox as well as the solution with hashing and required far less typing.</p>
+
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h"
+              >Read other posts</span
+            >
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+            
+              <span class="button next">
+                <a href="https://antdon.github.io/algorithms.github.io/posts/longest-consecutive-sequence/">
+                  <span class="button__text">Longest Consecutive Sequence</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+    
+      
+        
+
+      
+    
+  </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a
+  href="https://antdon.github.io/algorithms.github.io/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >Anton&#39;s Algorithims</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span
+          >© 2022 Powered by
+          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span
+        >
+        <span
+          >Theme created by
+          <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span
+        >
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://antdon.github.io/algorithms.github.io/assets/main.js"></script>
+<script src="https://antdon.github.io/algorithms.github.io/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>

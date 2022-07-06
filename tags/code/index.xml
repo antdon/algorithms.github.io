@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>code on Anton&#39;s Daily Algorithm</title>
+    
+    
+    
+    <link>https://antdon.github.io/algorithms.github.io/tags/code/</link>
+    <description>Recent content in code on Anton&#39;s Daily Algorithm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Jul 2022 16:52:11 +1000</lastBuildDate>
+    
+	<atom:link href="https://antdon.github.io/algorithms.github.io/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fibbonacci Numbers</title>
+      <link>https://antdon.github.io/algorithms.github.io/posts/fibbonacci-number/</link>
+      <pubDate>Wed, 06 Jul 2022 16:52:11 +1000</pubDate>
+      
+      <guid>https://antdon.github.io/algorithms.github.io/posts/fibbonacci-number/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Fibbonacci Numbers link to problem
+Problem explanation The problem is asking us to return the respective fibbonacci number of the input. Where the output should be given by the function f(0) = 0, f(1) = 1, f(n) = f(n-1) + f(n-2).
+Solution This is a common example of a problem that is best solved using recursion. We start by defining our base cases.
+if n == 0: return 0 elif n == 1: return 1 These are our stop conditions.
+          
+        
+        </description>
+    </item>
+    
+  </channel>
+</rss>
