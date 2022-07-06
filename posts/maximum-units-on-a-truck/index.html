@@ -1,317 +1,82 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto">
+<!doctype html><html><head><meta charset=utf-8><meta name=generator content="Hugo 0.68.3"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name=color-scheme content="light dark"><meta name=supported-color-schemes content="light dark"><meta name=keywords content><meta name=description content><meta name=author content="Anton Donohue"><meta name=copyright content="Anton Donohue"><meta http-equiv=content-language content="zh,en"><link rel=canonical href=https://antdon.me/posts/maximum-units-on-a-truck/><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><title>Maximum Units on a Truck&nbsp;&ndash;&nbsp;Anton's Algorithms</title><link rel=preconnect href=https://cdn.jsdelivr.net/ crossorigin><link rel=dns-prefetch href=https://cdn.jsdelivr.net/><link rel=dns-prefetch href=https://fonts.gstatic.com/><link rel=preload href=/css/core.min.4f47bbabbe1a95ba05bcbf7bff887938361467f1f25096a6a09541fcdfaf6f9eb55c16db012e40db452cfb1b4c0fc26a.css as=style onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel=stylesheet href=/css/core.min.4f47bbabbe1a95ba05bcbf7bff887938361467f1f25096a6a09541fcdfaf6f9eb55c16db012e40db452cfb1b4c0fc26a.css integrity=sha384-T0e7q74alboFvL97/4h5ODYUZ/HyUJamoJVB/N+vb561XBbbAS5A20Us+xtMD8Jq></noscript><style type=text/css>*,::before,::after{margin:0;padding:0;box-sizing:border-box}html{font-family:-system-ui,-apple-system,BlinkMacSystemFont,helvetica neue,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;font-size:17px;font-weight:400;line-height:1.7;scroll-behavior:smooth;transition:color .3s,background-color .3s;word-wrap:break-word;-webkit-text-size-adjust:100%}html[data-theme=dark] img{opacity:.65;transition:opacity .5s ease-in-out}html{background:#fff;--site-name-color: #3f4b67;--color-primary: #005ab4;--link-underline: #90cff9;--blockquote-border-left: 6px solid #0051a2;--block-background-color: #f7faff;--pag-background-color: rgba(0, 122, 255, .5);--box-shadow: 1px 1px 2px rgba(0,0,0,.125);--title-color: #303033;--body-color: #444}html[data-theme=dark]{background:#22272e;--site-name-color: #539bf5;--color-primary: #99bde1;--link-underline: #0051a2;--blockquote-border-left: 6px solid #5176bf;--block-background-color: #002c58;--box-shadow: none;--title-color: #dadada;--body-color: #e9e9e9}h1,h2,h3,h4,h5,h6{font-weight:600;line-height:1.3;margin-block-start:0;margin-block-end:0}h1{font-size:26px}h2{font-size:24px}h3{font-size:22px}section>h1{color:var(--title-color)}a{color:var(--color-primary);text-decoration-thickness:.15rem;text-decoration-color:var(--link-underline)}a:hover{text-decoration-color:var(--color-primary)}.wrapper{display:grid;grid-template-columns:1fr min(65ch,calc(100% - 64px)) 1fr;grid-column-gap:32px}.wrapper>section{grid-column:2}.header{margin:20px 0;display:-webkit-flex;display:flex;flex-wrap:wrap;text-align:initial;padding:15px 0;border-bottom:1px solid #f0f0f0;justify-content:space-between;align-items:baseline}.site-name{display:inline-block;font-weight:600;font-size:21px;color:var(--site-name-color)}.site-logo{height:38px;border-radius:3px;vertical-align:middle;margin-right:8px}.nav-item{display:inline-block;font-size:18px;padding:4px 6px;margin:2px 3px 2px 0;line-height:1.5;white-space:nowrap}.data-theme-btn{border:none;vertical-align:middle;transition:.3s;background-color:Transparent;background-repeat:no-repeat;cursor:pointer;overflow:hidden;outline:none;padding-right:0;padding-left:0}html[data-theme=light] .light-hidden{display:none}html[data-theme=dark] .dark-hidden{display:none}.note-list{margin:0;padding:0;list-style:none}.note-list .item{position:relative;width:100%;margin-top:25px}.note-list .item:last-child{border:0!important}.note-title{font-size:19px;font-weight:700}.note-date,.note-content{font-size:15px;text-decoration:none;color:var(--body-color)}.note-content,.note-imgs,.note-labels{margin-top:4px;text-align:justify;text-justify:inter-word}.article-tag,.article-category{display:inline-block;font-size:15px;line-height:1;padding:4px 6px;margin:2px 3px 2px 0;white-space:nowrap;border-radius:3px}.article-category{color:#3a8c42}.article-category .hashtag,.article-tag .hashtag{font-weight:700;opacity:.5}.footer{font-size:13px;margin:40px 0 20px}.footer-wrap{text-align:center;color:var(--body-color)}.tag-cloud{margin:2em 0 3em;text-align:center}.tag-cloud-tags{display:inline-block;position:relative;margin:5px;word-wrap:break-word;overflow-wrap:break-word}.archive-year{font-size:20px;font-weight:800;color:var(--title-color);margin-top:20px;margin-bottom:10px}.archive-list{list-style:none}.archive-date{flex:0 0 100px;color:var(--title-color)}.archive-text{color:var(--body-color)}ul.archive-list li{display:flex}.article-containter{margin-bottom:20px}.article-header{margin:20px 0}.article-date{font-size:14px;margin-top:20px;color:#838387}.lastmod-date{font-size:14px;color:#838387}.markdown-body{color:var(--body-color)}.markdown-body p{margin-top:0;margin-bottom:20px}.pagination{display:block;text-align:center;margin:20px 0 40px}.pagination ul{display:inline-block;list-style:none;font-weight:600;padding:0;margin:0}.pagination ul li{display:inline}.pagination ul li a{color:var(--color-primary);float:left;padding:8px 16px;text-decoration:none}.pagination ul li a:hover:not(.active){background-color:var(--pag-background-color)}.pagination ul li a.active{background-color:var(--color-primary);color:var(--block-background-color)}</style></head><body><div class=wrapper><section id=header class=header><div class=header-left><a href=/><p class=site-name>Anton's Algorithms</p></a></div><div class=header-right><div class=nav><a class=nav-item href=/>Index</a><a class=nav-item href=/tags/>Tags</a><a class=nav-item href=/archives/>Archives</a><a class=nav-item href=/about/>About</a><script>const htmlEl=document.getElementsByTagName('html')[0];const currentTheme=localStorage.getItem('theme')?localStorage.getItem('theme'):null;if(currentTheme){htmlEl.dataset.theme=currentTheme;}
+const toggleTheme=(theme)=>{htmlEl.dataset.theme=theme;localStorage.setItem('theme',theme);}
+if(localStorage.getItem('theme')==='dark'||window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){htmlEl.dataset.theme='dark';}else{toggleTheme('light');}</script>
+<button class="data-theme-btn dark-hidden" onclick="toggleTheme('dark');"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3f4b67" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></button>
+<button class="data-theme-btn light-hidden" onclick="toggleTheme('light');"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e9e9e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.2 4.2l1.4 1.4m12.8 12.8 1.4 1.4M1 12h2m18 0h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg></button></div></div></section><section id=content><div class=article-containter><section class=article-header><h1>Maximum Units on a Truck</h1><p class=article-date>2022-07-01</p></section><article class=markdown-body><p><a href=https://leetcode.com/problems/maximum-units-on-a-truck/ target=_blank rel=noopener>link to question</a></p><h2 id=question-explanation>Question explanation</h2><p>So the question is asking us to maximize the number of units in a set number of boxes. Boxes have a variable capacity. But the truck can fit a set number of boxes with any capacity. This is stupid in my opinion because a larger capacity box would most likely take up more space in the truck.</p><h2 id=my-original-solution>My Original Solution</h2><p>When we read that we need to maximize a variable there is a high chance that we need to use a sort function. In this case we need to sort by the reverse of the second indexs in the tuple because we want the largest size box to be at the front. We can use the sort we discussed in [[Queue Reconstruction by Height]].</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>boxTypes<span style=color:#ff79c6>.</span>sort(key<span style=color:#ff79c6>=</span><span style=color:#ff79c6>lambda</span> a: <span style=color:#ff79c6>-</span>a[<span style=color:#bd93f9>1</span>])
+</code></pre></div><p>We need to keep track of the number of boxes we have &ldquo;loaded&rdquo; on to the truck.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>count <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>0</span>
+</code></pre></div><p>We then want to now run through this list until either we run out of boxes or the truck is full. We can do this using a while loop of the truck size that breaks if we run out of boxes.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>while</span> truckSize <span style=color:#ff79c6>&gt;</span> <span style=color:#bd93f9>0</span>:
+            <span style=color:#ff79c6>if</span> boxTypes <span style=color:#ff79c6>==</span> []:
+                <span style=color:#ff79c6>return</span> count
+            <span style=color:#ff79c6>if</span> boxTypes[<span style=color:#bd93f9>0</span>][<span style=color:#bd93f9>0</span>] <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+                boxTypes<span style=color:#ff79c6>.</span>pop(<span style=color:#bd93f9>0</span>)
+            <span style=color:#ff79c6>else</span>:
+                boxTypes[<span style=color:#bd93f9>0</span>][<span style=color:#bd93f9>0</span>]<span style=color:#ff79c6>-=</span> <span style=color:#bd93f9>1</span>
+                truckSize <span style=color:#ff79c6>-=</span> <span style=color:#bd93f9>1</span>
+                count <span style=color:#ff79c6>+=</span> boxTypes[<span style=color:#bd93f9>0</span>][<span style=color:#bd93f9>1</span>]
+</code></pre></div><p>Once we have filled the truck we can just return count</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>return</span> count
+</code></pre></div><h2 id=entire-solution>Entire solution</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>class</span> <span style=color:#50fa7b>Solution</span>:
+    <span style=color:#ff79c6>def</span> <span style=color:#50fa7b>maximumUnits</span>(self, boxTypes: List[List[<span style=color:#8be9fd;font-style:italic>int</span>]], truckSize: <span style=color:#8be9fd;font-style:italic>int</span>) <span style=color:#ff79c6>-&gt;</span> <span style=color:#8be9fd;font-style:italic>int</span>:
+        boxTypes<span style=color:#ff79c6>.</span>sort(key<span style=color:#ff79c6>=</span><span style=color:#ff79c6>lambda</span> a: <span style=color:#ff79c6>-</span>a[<span style=color:#bd93f9>1</span>])
+        count <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>0</span>
+        <span style=color:#ff79c6>while</span> truckSize <span style=color:#ff79c6>&gt;</span> <span style=color:#bd93f9>0</span>:
+            <span style=color:#ff79c6>if</span> boxTypes <span style=color:#ff79c6>==</span> []:
+                <span style=color:#ff79c6>return</span> count
+            <span style=color:#ff79c6>if</span> boxTypes[<span style=color:#bd93f9>0</span>][<span style=color:#bd93f9>0</span>] <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+                boxTypes<span style=color:#ff79c6>.</span>pop(<span style=color:#bd93f9>0</span>)
+            <span style=color:#ff79c6>else</span>:
+                boxTypes[<span style=color:#bd93f9>0</span>][<span style=color:#bd93f9>0</span>]<span style=color:#ff79c6>-=</span> <span style=color:#bd93f9>1</span>
+                truckSize <span style=color:#ff79c6>-=</span> <span style=color:#bd93f9>1</span>
+                count <span style=color:#ff79c6>+=</span> boxTypes[<span style=color:#bd93f9>0</span>][<span style=color:#bd93f9>1</span>]
+        <span style=color:#ff79c6>return</span> count
+</code></pre></div><h2 id=optimization>Optimization</h2><p>So the solution above is O(nlogn) because the list needs to be sorted and thats the most complex operation we made. However, the operation of taking the box from the start of the boxTypes is very slow. If an element is removed from the start of the list we need to shift all the elements to the right of that element left so that the list begins at the same position in memory and we don&rsquo;t just have an empty spot. We can fix this by sorting the boxTypes list in regular order and taking from the end instead of the beginning.\</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>class</span> <span style=color:#50fa7b>Solution</span>:
+    <span style=color:#ff79c6>def</span> <span style=color:#50fa7b>maximumUnits</span>(self, boxTypes: List[List[<span style=color:#8be9fd;font-style:italic>int</span>]], truckSize: <span style=color:#8be9fd;font-style:italic>int</span>) <span style=color:#ff79c6>-&gt;</span> <span style=color:#8be9fd;font-style:italic>int</span>:
+        boxTypes<span style=color:#ff79c6>.</span>sort(key<span style=color:#ff79c6>=</span><span style=color:#ff79c6>lambda</span> a: a[<span style=color:#bd93f9>1</span>])
+        count <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>0</span>
+        <span style=color:#ff79c6>while</span> truckSize <span style=color:#ff79c6>&gt;</span> <span style=color:#bd93f9>0</span>:
+            <span style=color:#ff79c6>if</span> boxTypes <span style=color:#ff79c6>==</span> []:
+                <span style=color:#ff79c6>return</span> count
+            <span style=color:#ff79c6>if</span> boxTypes[<span style=color:#8be9fd;font-style:italic>len</span>(boxTypes) <span style=color:#ff79c6>-</span> <span style=color:#bd93f9>1</span>][<span style=color:#bd93f9>0</span>] <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span>:
+                boxTypes<span style=color:#ff79c6>.</span>pop()
+            <span style=color:#ff79c6>else</span>:
+                boxTypes[<span style=color:#8be9fd;font-style:italic>len</span>(boxTypes) <span style=color:#ff79c6>-</span> <span style=color:#bd93f9>1</span>][<span style=color:#bd93f9>0</span>]<span style=color:#ff79c6>-=</span> <span style=color:#bd93f9>1</span>
+                truckSize <span style=color:#ff79c6>-=</span> <span style=color:#bd93f9>1</span>
+                count <span style=color:#ff79c6>+=</span> boxTypes[<span style=color:#8be9fd;font-style:italic>len</span>(boxTypes) <span style=color:#ff79c6>-</span> <span style=color:#bd93f9>1</span>][<span style=color:#bd93f9>1</span>]
+        <span style=color:#ff79c6>return</span> count
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Maximum Units on a Truck | Anton&#39;s Daily Algorithm</title>
-<meta name="keywords" content="">
-<meta name="description" content="link to question
-Question explanation So the question is asking us to maximize the number of units in a set number of boxes. Boxes have a variable capacity. But the truck can fit a set number of boxes with any capacity. This is stupid in my opinion because a larger capacity box would most likely take up more space in the truck.
-My Original Solution When we read that we need to maximize a variable there is a high chance that we need to use a sort function.">
-<meta name="author" content="">
-<link rel="canonical" href="https://antdon.me/posts/maximum-units-on-a-truck/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.41f2d211c00e636a3c229c52ef2d4299a66891ae66771098993b13bca7972ae6.css" integrity="sha256-QfLSEcAOY2o8IpxS7y1CmaZoka5mdxCYmTsTvKeXKuY=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
-    onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://antdon.me/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://antdon.me/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://antdon.me/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://antdon.me/apple-touch-icon.png">
-<link rel="mask-icon" href="https://antdon.me/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-</noscript><meta property="og:title" content="Maximum Units on a Truck" />
-<meta property="og:description" content="link to question
-Question explanation So the question is asking us to maximize the number of units in a set number of boxes. Boxes have a variable capacity. But the truck can fit a set number of boxes with any capacity. This is stupid in my opinion because a larger capacity box would most likely take up more space in the truck.
-My Original Solution When we read that we need to maximize a variable there is a high chance that we need to use a sort function." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://antdon.me/posts/maximum-units-on-a-truck/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-07-01T12:17:07&#43;10:00" />
-<meta property="article:modified_time" content="2022-07-01T12:17:07&#43;10:00" /><meta property="og:site_name" content="Anton&#39;s Daily Algorithm" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Maximum Units on a Truck"/>
-<meta name="twitter:description" content="link to question
-Question explanation So the question is asking us to maximize the number of units in a set number of boxes. Boxes have a variable capacity. But the truck can fit a set number of boxes with any capacity. This is stupid in my opinion because a larger capacity box would most likely take up more space in the truck.
-My Original Solution When we read that we need to maximize a variable there is a high chance that we need to use a sort function."/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [, 
-    {
-      "@type": "ListItem",
-      "position":  3 ,
-      "name": "Maximum Units on a Truck",
-      "item": "https://antdon.me/posts/maximum-units-on-a-truck/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Maximum Units on a Truck",
-  "name": "Maximum Units on a Truck",
-  "description": "link to question\nQuestion explanation So the question is asking us to maximize the number of units in a set number of boxes. Boxes have a variable capacity. But the truck can fit a set number of boxes with any capacity. This is stupid in my opinion because a larger capacity box would most likely take up more space in the truck.\nMy Original Solution When we read that we need to maximize a variable there is a high chance that we need to use a sort function.",
-  "keywords": [
-    
-  ],
-  "articleBody": "link to question\nQuestion explanation So the question is asking us to maximize the number of units in a set number of boxes. Boxes have a variable capacity. But the truck can fit a set number of boxes with any capacity. This is stupid in my opinion because a larger capacity box would most likely take up more space in the truck.\nMy Original Solution When we read that we need to maximize a variable there is a high chance that we need to use a sort function. In this case we need to sort by the reverse of the second indexs in the tuple because we want the largest size box to be at the front. We can use the sort we discussed in [[Queue Reconstruction by Height]].\nboxTypes.sort(key=lambda a: -a[1]) We need to keep track of the number of boxes we have “loaded” on to the truck.\ncount = 0 We then want to now run through this list until either we run out of boxes or the truck is full. We can do this using a while loop of the truck size that breaks if we run out of boxes.\nwhile truckSize  0: if boxTypes == []: return count if boxTypes[0][0] == 0: boxTypes.pop(0) else: boxTypes[0][0]-= 1 truckSize -= 1 count += boxTypes[0][1] Once we have filled the truck we can just return count\nreturn count Entire solution class Solution: def maximumUnits(self, boxTypes: List[List[int]], truckSize: int) - int: boxTypes.sort(key=lambda a: -a[1]) count = 0 while truckSize  0: if boxTypes == []: return count if boxTypes[0][0] == 0: boxTypes.pop(0) else: boxTypes[0][0]-= 1 truckSize -= 1 count += boxTypes[0][1] return count Optimization So the solution above is O(nlogn) because the list needs to be sorted and thats the most complex operation we made. However, the operation of taking the box from the start of the boxTypes is very slow. If an element is removed from the start of the list we need to shift all the elements to the right of that element left so that the list begins at the same position in memory and we don’t just have an empty spot. We can fix this by sorting the boxTypes list in regular order and taking from the end instead of the beginning.\\\nclass Solution: def maximumUnits(self, boxTypes: List[List[int]], truckSize: int) - int: boxTypes.sort(key=lambda a: a[1]) count = 0 while truckSize  0: if boxTypes == []: return count if boxTypes[len(boxTypes) - 1][0] == 0: boxTypes.pop() else: boxTypes[len(boxTypes) - 1][0]-= 1 truckSize -= 1 count += boxTypes[len(boxTypes) - 1][1] return count The next way to optimize is going to be not removing the boxes at all. Rather than iterating through the range(truckSize) we can iterate through each box once and subtract the number of boxes from the truckSize while keeping a count of the box[0] x box[1]. When we get to a position where only some of the boxes fit on the truck we can add the size of the boxes by the remaineder in the truck.\nclass Solution: def maximumUnits(self, boxTypes: List[List[int]], truckSize: int) - int: boxTypes.sort(key=lambda a: -a[1]) summ = 0 for box in boxTypes: print(box, truckSize, summ) if box[0]  truckSize: summ += truckSize*box[1] break else: summ += box[0] * box[1] truckSize -= box[0] return summ Discussion Solutions By looking at the discussion we can find ways to further optimize our code. So something I confess I didn’t think of is that since the capacity of the box is distinct and limited to 1000 elements we can do a bucket sort rather than a comparison sort. This brings our solution down to O(n) rather than O(log(n)) which makes it much faster. Here is an example of that courtesy of InjySarhan on leetcode.\ndef maximumUnits(self, boxTypes: List[List[int]], truckSize: int) - int: bucket=[0]*1001 # here the bucket index represents the number of units, and value is how many boxes are there which have unit X res=0 #fill in the bucket for numBox,units in boxTypes: bucket[units]+=numBox #reverse the bucket, why? because its a greedy approach, start with higher units i.e: higher index for idx,numBox in enumerate(bucket[::-1]): unit=len(bucket)-idx-1 #because we reverse bucket the original index which represents the # of units is lost, so I want the original index  if truckSize=numBox: res+=numBox*unit truckSize-=numBox else: res+=truckSize*unit return res return res ",
-  "wordCount" : "712",
-  "inLanguage": "en",
-  "datePublished": "2022-07-01T12:17:07+10:00",
-  "dateModified": "2022-07-01T12:17:07+10:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://antdon.me/posts/maximum-units-on-a-truck/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Anton's Daily Algorithm",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://antdon.me/favicon.ico"
-    }
-  }
-}
-</script>
-</head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://antdon.me" accesskey="h" title="Anton&#39;s Daily Algorithm (Alt + H)">Anton&#39;s Daily Algorithm</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title">
-      Maximum Units on a Truck
-    </h1>
-    <div class="post-meta"><span title='2022-07-01 12:17:07 +1000 AEST'>July 1, 2022</span>
-
-</div>
-  </header> 
-  <div class="post-content"><p><a href="https://leetcode.com/problems/maximum-units-on-a-truck/">link to question</a></p>
-<h2 id="question-explanation">Question explanation<a hidden class="anchor" aria-hidden="true" href="#question-explanation">#</a></h2>
-<p>So the question is asking us to maximize the number of units in a set number of boxes. Boxes have a variable capacity. But the truck can fit a set number of boxes with any capacity. This is stupid in my opinion because a larger capacity box would most likely take up more space in the truck.</p>
-<h2 id="my-original-solution">My Original Solution<a hidden class="anchor" aria-hidden="true" href="#my-original-solution">#</a></h2>
-<p>When we read that we need to maximize a variable there is a high chance that we need to use a sort function. In this case we need to sort by the reverse of the second indexs in the tuple because we want the largest size box to be at the front. We can use the sort we discussed in [[Queue Reconstruction by Height]].</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">boxTypes<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> a: <span style="color:#f92672">-</span>a[<span style="color:#ae81ff">1</span>])
-</code></pre></div><p>We need to keep track of the number of boxes we have &ldquo;loaded&rdquo; on to the truck.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-</code></pre></div><p>We then want to now run through this list until either we run out of boxes or the truck is full. We can do this using a while loop of the truck size that breaks if we run out of boxes.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">while</span> truckSize <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
-            <span style="color:#66d9ef">if</span> boxTypes <span style="color:#f92672">==</span> []:
-                <span style="color:#66d9ef">return</span> count
-            <span style="color:#66d9ef">if</span> boxTypes[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-                boxTypes<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">0</span>)
-            <span style="color:#66d9ef">else</span>:
-                boxTypes[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
-                truckSize <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
-                count <span style="color:#f92672">+=</span> boxTypes[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">1</span>]
-</code></pre></div><p>Once we have filled the truck we can just return count</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">return</span> count
-</code></pre></div><h2 id="entire-solution">Entire solution<a hidden class="anchor" aria-hidden="true" href="#entire-solution">#</a></h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maximumUnits</span>(self, boxTypes: List[List[int]], truckSize: int) <span style="color:#f92672">-&gt;</span> int:
-        boxTypes<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> a: <span style="color:#f92672">-</span>a[<span style="color:#ae81ff">1</span>])
-        count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">while</span> truckSize <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
-            <span style="color:#66d9ef">if</span> boxTypes <span style="color:#f92672">==</span> []:
-                <span style="color:#66d9ef">return</span> count
-            <span style="color:#66d9ef">if</span> boxTypes[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-                boxTypes<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">0</span>)
-            <span style="color:#66d9ef">else</span>:
-                boxTypes[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
-                truckSize <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
-                count <span style="color:#f92672">+=</span> boxTypes[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">1</span>]
-        <span style="color:#66d9ef">return</span> count
-</code></pre></div><h2 id="optimization">Optimization<a hidden class="anchor" aria-hidden="true" href="#optimization">#</a></h2>
-<p>So the solution above is O(nlogn) because the list needs to be sorted and thats the most complex operation we made. However, the operation of taking the box from the start of the boxTypes is very slow. If an element is removed from the start of the list we need to shift all the elements to the right of that element left so that the list begins at the same position in memory and we don&rsquo;t just have an empty spot. We can fix this by sorting the boxTypes list in regular order and taking from the end instead of the beginning.\</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maximumUnits</span>(self, boxTypes: List[List[int]], truckSize: int) <span style="color:#f92672">-&gt;</span> int:
-        boxTypes<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> a: a[<span style="color:#ae81ff">1</span>])
-        count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">while</span> truckSize <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
-            <span style="color:#66d9ef">if</span> boxTypes <span style="color:#f92672">==</span> []:
-                <span style="color:#66d9ef">return</span> count
-            <span style="color:#66d9ef">if</span> boxTypes[len(boxTypes) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-                boxTypes<span style="color:#f92672">.</span>pop()
-            <span style="color:#66d9ef">else</span>:
-                boxTypes[len(boxTypes) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
-                truckSize <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
-                count <span style="color:#f92672">+=</span> boxTypes[len(boxTypes) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>]
-        <span style="color:#66d9ef">return</span> count
-
-</code></pre></div><p>The next way to optimize is going to be not removing the boxes at all. Rather than iterating through the <code>range(truckSize)</code> we can iterate through each box once and subtract the number of boxes from the truckSize while keeping a count of the box[0] x box[1]. When we get to a position where only some of the boxes fit on the truck we can add the size of the boxes by the remaineder in the truck.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maximumUnits</span>(self, boxTypes: List[List[int]], truckSize: int) <span style="color:#f92672">-&gt;</span> int:
-        boxTypes<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> a: <span style="color:#f92672">-</span>a[<span style="color:#ae81ff">1</span>])
-        summ <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">for</span> box <span style="color:#f92672">in</span> boxTypes:
-            <span style="color:#66d9ef">print</span>(box, truckSize, summ)
-            <span style="color:#66d9ef">if</span> box[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&gt;</span> truckSize:
-                summ <span style="color:#f92672">+=</span> truckSize<span style="color:#f92672">*</span>box[<span style="color:#ae81ff">1</span>]
-                <span style="color:#66d9ef">break</span>
-            <span style="color:#66d9ef">else</span>:
-                summ <span style="color:#f92672">+=</span> box[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> box[<span style="color:#ae81ff">1</span>]
-                truckSize <span style="color:#f92672">-=</span> box[<span style="color:#ae81ff">0</span>]
-        <span style="color:#66d9ef">return</span> summ
-</code></pre></div><h2 id="discussion-solutions">Discussion Solutions<a hidden class="anchor" aria-hidden="true" href="#discussion-solutions">#</a></h2>
-<p>By looking at the discussion we can find ways to further optimize our code. So something I confess I didn&rsquo;t think of is that since the capacity of the box is distinct and limited to 1000 elements we can do a bucket sort rather than a comparison sort. This brings our solution down to O(n) rather than O(log(n)) which makes it much faster. Here is an example of that courtesy of <a href="https://leetcode.com/InjySarhan">InjySarhan</a> on leetcode.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maximumUnits</span>(self, boxTypes: List[List[int]], truckSize: int) <span style="color:#f92672">-&gt;</span> int:
+</code></pre></div><p>The next way to optimize is going to be not removing the boxes at all. Rather than iterating through the <code>range(truckSize)</code> we can iterate through each box once and subtract the number of boxes from the truckSize while keeping a count of the box[0] x box[1]. When we get to a position where only some of the boxes fit on the truck we can add the size of the boxes by the remaineder in the truck.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>class</span> <span style=color:#50fa7b>Solution</span>:
+    <span style=color:#ff79c6>def</span> <span style=color:#50fa7b>maximumUnits</span>(self, boxTypes: List[List[<span style=color:#8be9fd;font-style:italic>int</span>]], truckSize: <span style=color:#8be9fd;font-style:italic>int</span>) <span style=color:#ff79c6>-&gt;</span> <span style=color:#8be9fd;font-style:italic>int</span>:
+        boxTypes<span style=color:#ff79c6>.</span>sort(key<span style=color:#ff79c6>=</span><span style=color:#ff79c6>lambda</span> a: <span style=color:#ff79c6>-</span>a[<span style=color:#bd93f9>1</span>])
+        summ <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>0</span>
+        <span style=color:#ff79c6>for</span> box <span style=color:#ff79c6>in</span> boxTypes:
+            <span style=color:#ff79c6>print</span>(box, truckSize, summ)
+            <span style=color:#ff79c6>if</span> box[<span style=color:#bd93f9>0</span>] <span style=color:#ff79c6>&gt;</span> truckSize:
+                summ <span style=color:#ff79c6>+=</span> truckSize<span style=color:#ff79c6>*</span>box[<span style=color:#bd93f9>1</span>]
+                <span style=color:#ff79c6>break</span>
+            <span style=color:#ff79c6>else</span>:
+                summ <span style=color:#ff79c6>+=</span> box[<span style=color:#bd93f9>0</span>] <span style=color:#ff79c6>*</span> box[<span style=color:#bd93f9>1</span>]
+                truckSize <span style=color:#ff79c6>-=</span> box[<span style=color:#bd93f9>0</span>]
+        <span style=color:#ff79c6>return</span> summ
+</code></pre></div><h2 id=discussion-solutions>Discussion Solutions</h2><p>By looking at the discussion we can find ways to further optimize our code. So something I confess I didn&rsquo;t think of is that since the capacity of the box is distinct and limited to 1000 elements we can do a bucket sort rather than a comparison sort. This brings our solution down to O(n) rather than O(log(n)) which makes it much faster. Here is an example of that courtesy of <a href=https://leetcode.com/InjySarhan target=_blank rel=noopener>InjySarhan</a> on leetcode.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#ff79c6>def</span> <span style=color:#50fa7b>maximumUnits</span>(self, boxTypes: List[List[<span style=color:#8be9fd;font-style:italic>int</span>]], truckSize: <span style=color:#8be9fd;font-style:italic>int</span>) <span style=color:#ff79c6>-&gt;</span> <span style=color:#8be9fd;font-style:italic>int</span>:
         
-        bucket<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">1001</span> <span style="color:#75715e"># here the bucket index represents the number of units, and value is how many boxes are there which have unit X</span>
-        res<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+        bucket<span style=color:#ff79c6>=</span>[<span style=color:#bd93f9>0</span>]<span style=color:#ff79c6>*</span><span style=color:#bd93f9>1001</span> <span style=color:#6272a4># here the bucket index represents the number of units, and value is how many boxes are there which have unit X</span>
+        res<span style=color:#ff79c6>=</span><span style=color:#bd93f9>0</span>
         
-        <span style="color:#75715e">#fill in the bucket</span>
-        <span style="color:#66d9ef">for</span> numBox,units <span style="color:#f92672">in</span> boxTypes:
-            bucket[units]<span style="color:#f92672">+=</span>numBox
+        <span style=color:#6272a4>#fill in the bucket</span>
+        <span style=color:#ff79c6>for</span> numBox,units <span style=color:#ff79c6>in</span> boxTypes:
+            bucket[units]<span style=color:#ff79c6>+=</span>numBox
     
     
-        <span style="color:#75715e">#reverse the bucket, why? because its a greedy approach, start with higher units i.e: higher index</span>
-        <span style="color:#66d9ef">for</span> idx,numBox <span style="color:#f92672">in</span> enumerate(bucket[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]):
+        <span style=color:#6272a4>#reverse the bucket, why? because its a greedy approach, start with higher units i.e: higher index</span>
+        <span style=color:#ff79c6>for</span> idx,numBox <span style=color:#ff79c6>in</span> <span style=color:#8be9fd;font-style:italic>enumerate</span>(bucket[::<span style=color:#ff79c6>-</span><span style=color:#bd93f9>1</span>]):
             
-            unit<span style="color:#f92672">=</span>len(bucket)<span style="color:#f92672">-</span>idx<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#75715e">#because we reverse bucket the original index which represents the # of units is lost, so I want the original index </span>
+            unit<span style=color:#ff79c6>=</span><span style=color:#8be9fd;font-style:italic>len</span>(bucket)<span style=color:#ff79c6>-</span>idx<span style=color:#ff79c6>-</span><span style=color:#bd93f9>1</span> <span style=color:#6272a4>#because we reverse bucket the original index which represents the # of units is lost, so I want the original index </span>
             
-            <span style="color:#66d9ef">if</span> truckSize<span style="color:#f92672">&gt;=</span>numBox:
-                res<span style="color:#f92672">+=</span>numBox<span style="color:#f92672">*</span>unit
-                truckSize<span style="color:#f92672">-=</span>numBox
-            <span style="color:#66d9ef">else</span>:
-                res<span style="color:#f92672">+=</span>truckSize<span style="color:#f92672">*</span>unit
-                <span style="color:#66d9ef">return</span> res
+            <span style=color:#ff79c6>if</span> truckSize<span style=color:#ff79c6>&gt;=</span>numBox:
+                res<span style=color:#ff79c6>+=</span>numBox<span style=color:#ff79c6>*</span>unit
+                truckSize<span style=color:#ff79c6>-=</span>numBox
+            <span style=color:#ff79c6>else</span>:
+                res<span style=color:#ff79c6>+=</span>truckSize<span style=color:#ff79c6>*</span>unit
+                <span style=color:#ff79c6>return</span> res
             
-        <span style="color:#66d9ef">return</span> res
-</code></pre></div>
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-    </ul>
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-    <span>&copy; 2022 <a href="https://antdon.me">Anton&#39;s Daily Algorithm</a></span>
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+        <span style=color:#ff79c6>return</span> res
+</code></pre></div></article></div><section class=article-navigation><p><a class=link href=/posts/longest-consecutive-sequence/><span class=li></span>Longest Consecutive Sequence</a></p><p><a class=link href=/posts/queue-reconstruction-by-height/><span class=li></span>Queue Reconstruction By Height</a class="link"></p></section></section><section id=footer class="footer max-body-width"><div class=footer-wrap><p class=copyright>Anton's Algorithms</p></div><div class=footer-wrap><a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank rel=noopener>CC BY-NC-SA 4.0</a><span> | </span><a href=/index.xml target=_blank rel=noopener>RSS</a></div><div class=footer-wrap><p class=powerby><span>Powered by </span><a href=https://gohugo.io target=_blank rel=noopener>Hugo</a><span> and the </span><a href=https://github.com/qdzhang/hugo-notepadium-mod target=_blank rel=noopener>Notepadium-mod</a></p></div><div class=footer-wrap><a onclick='window.scrollTo({top:0,behavior:"smooth"});'>^ TOP ^</a></div></section></div></body></html>
