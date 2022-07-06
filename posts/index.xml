@@ -1,40 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Anton&#39;s Daily Algorithm</title>
-    
-    
-    
     <link>https://antdon.me/posts/</link>
     <description>Recent content in Posts on Anton&#39;s Daily Algorithm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Jul 2022 16:52:11 +1000</lastBuildDate>
-    
-	<atom:link href="https://antdon.me/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 06 Jul 2022 16:52:11 +1000</lastBuildDate><atom:link href="https://antdon.me/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fibbonacci Numbers</title>
       <link>https://antdon.me/posts/fibbonacci-number/</link>
       <pubDate>Wed, 06 Jul 2022 16:52:11 +1000</pubDate>
       
       <guid>https://antdon.me/posts/fibbonacci-number/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          link to problem
+      <description>link to problem
 Problem explanation The problem is asking us to return the respective fibbonacci number of the input. Where the output should be given by the function f(0) = 0, f(1) = 1, f(n) = f(n-1) + f(n-2).
 Solution This is a common example of a problem that is best solved using recursion. We start by defining our base cases.
-if n == 0: return 0 elif n == 1: return 1 These are our stop conditions.
-          
-        
-        </description>
+if n == 0: return 0 elif n == 1: return 1 These are our stop conditions.</description>
     </item>
     
     <item>
@@ -43,19 +25,8 @@ if n == 0: return 0 elif n == 1: return 1 These are our stop conditions.
       <pubDate>Tue, 05 Jul 2022 16:21:42 +1000</pubDate>
       
       <guid>https://antdon.me/posts/longest-consecutive-sequence/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          Longest Consecutive Sequence Problem Explanation The question provides you with an unsorted array and you need to find the longest consecutive sequence within it. This sequence can appear not in order. Furthermore, the question states that we need to do this in O(n) time.
-Initial Thoughts At first glance the only thing that makes this problem non-trivial is the time requirement. O(n). Sorting the list would make the question much easier but since that is a O(nlogn) operation that is not an option.
-          
-        
-        </description>
+      <description>Longest Consecutive Sequence Problem Explanation The question provides you with an unsorted array and you need to find the longest consecutive sequence within it. This sequence can appear not in order. Furthermore, the question states that we need to do this in O(n) time.
+Initial Thoughts At first glance the only thing that makes this problem non-trivial is the time requirement. O(n). Sorting the list would make the question much easier but since that is a O(nlogn) operation that is not an option.</description>
     </item>
     
     <item>
@@ -64,20 +35,9 @@ Initial Thoughts At first glance the only thing that makes this problem non-triv
       <pubDate>Fri, 01 Jul 2022 12:17:07 +1000</pubDate>
       
       <guid>https://antdon.me/posts/maximum-units-on-a-truck/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          link to question
+      <description>link to question
 Question explanation So the question is asking us to maximize the number of units in a set number of boxes. Boxes have a variable capacity. But the truck can fit a set number of boxes with any capacity. This is stupid in my opinion because a larger capacity box would most likely take up more space in the truck.
-My Original Solution When we read that we need to maximize a variable there is a high chance that we need to use a sort function.
-          
-        
-        </description>
+My Original Solution When we read that we need to maximize a variable there is a high chance that we need to use a sort function.</description>
     </item>
     
     <item>
@@ -86,19 +46,8 @@ My Original Solution When we read that we need to maximize a variable there is a
       <pubDate>Wed, 29 Jun 2022 20:29:10 +1000</pubDate>
       
       <guid>https://antdon.me/posts/queue-reconstruction-by-height/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          link to question
-My original solution from itertools import permutations class Solution: def reconstructQueue(self, people: List[List[int]]) -&amp;gt; List[List[int]]: # length is only 2000 so we can viably just check that it hold and try every perm for permutation in permutations(people): if self.constructed(permutation): return permutation return [] def constructed(self, people: List[List[int]]) -&amp;gt; bool: for index, (person, smaller) in enumerate(people): count = 0 for i in range(index): if people[i][0] &amp;gt;= person: count += 1 if count !
-          
-        
-        </description>
+      <description>link to question
+My original solution from itertools import permutations class Solution: def reconstructQueue(self, people: List[List[int]]) -&amp;gt; List[List[int]]: # length is only 2000 so we can viably just check that it hold and try every perm for permutation in permutations(people): if self.constructed(permutation): return permutation return [] def constructed(self, people: List[List[int]]) -&amp;gt; bool: for index, (person, smaller) in enumerate(people): count = 0 for i in range(index): if people[i][0] &amp;gt;= person: count += 1 if count !</description>
     </item>
     
     <item>
@@ -107,22 +56,11 @@ My original solution from itertools import permutations class Solution: def reco
       <pubDate>Wed, 01 Jun 2022 20:29:10 +1000</pubDate>
       
       <guid>https://antdon.me/posts/minimum-moves-to-equal-array-elements-ii/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          Question: Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.
+      <description>Question: Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.
 In one move, you can increment or decrement an element of the array by 1.
 Test cases are designed so that the answer will fit in a 32-bit integer.
 Example 1:
-Input: nums = [1,2,3] Output: 2 Explanation: Only two moves are needed (remember each move increments or decrements one element): [1,2,3] =&amp;gt; [2,2,3] =&amp;gt; [2,2,2]
-          
-        
-        </description>
+Input: nums = [1,2,3] Output: 2 Explanation: Only two moves are needed (remember each move increments or decrements one element): [1,2,3] =&amp;gt; [2,2,3] =&amp;gt; [2,2,2]</description>
     </item>
     
   </channel>

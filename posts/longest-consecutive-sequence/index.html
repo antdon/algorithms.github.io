@@ -1,50 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    
-      <title>
-        Longest Consecutive Sequence ::
-        Anton&#39;s Daily Algorithm — A simple theme for Hugo
-      </title>
-    
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta
-  name="description"
-  content="Longest Consecutive Sequence Problem Explanation The question provides you with an unsorted array and you need to find the longest consecutive sequence within it. This sequence can appear not in order. Furthermore, the question states that we need to do this in O(n) time.
-Initial Thoughts At first glance the only thing that makes this problem non-trivial is the time requirement. O(n). Sorting the list would make the question much easier but since that is a O(nlogn) operation that is not an option."
-/>
-<meta
-  name="keywords"
-  content=""
-/>
-<meta name="robots" content="noodp" />
-<link rel="canonical" href="https://antdon.me/posts/longest-consecutive-sequence/" />
+<html lang="en" dir="auto">
 
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Longest Consecutive Sequence | Anton&#39;s Daily Algorithm</title>
+<meta name="keywords" content="">
+<meta name="description" content="Longest Consecutive Sequence Problem Explanation The question provides you with an unsorted array and you need to find the longest consecutive sequence within it. This sequence can appear not in order. Furthermore, the question states that we need to do this in O(n) time.
+Initial Thoughts At first glance the only thing that makes this problem non-trivial is the time requirement. O(n). Sorting the list would make the question much easier but since that is a O(nlogn) operation that is not an option.">
+<meta name="author" content="">
+<link rel="canonical" href="https://antdon.me/posts/longest-consecutive-sequence/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.41f2d211c00e636a3c229c52ef2d4299a66891ae66771098993b13bca7972ae6.css" integrity="sha256-QfLSEcAOY2o8IpxS7y1CmaZoka5mdxCYmTsTvKeXKuY=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://antdon.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://antdon.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://antdon.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://antdon.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://antdon.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-
-
-
-<link rel="stylesheet" href="https://antdon.me/assets/style.css" />
-
-<link rel="stylesheet" href="https://antdon.me/style.css" />
-
-
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="144x144"
-  href="https://antdon.me/img/apple-touch-icon-144-precomposed.png"
-/>
-<link rel="shortcut icon" href="https://antdon.me/img/favicon.png" />
-
-
-<link href="https://antdon.me/assets/fonts/Inter-Italic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="https://antdon.me/assets/fonts/Inter-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="https://antdon.me/assets/fonts/Inter-Medium.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="https://antdon.me/assets/fonts/Inter-MediumItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="https://antdon.me/assets/fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="https://antdon.me/assets/fonts/Inter-BoldItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
-
+    </style>
+</noscript><meta property="og:title" content="Longest Consecutive Sequence" />
+<meta property="og:description" content="Longest Consecutive Sequence Problem Explanation The question provides you with an unsorted array and you need to find the longest consecutive sequence within it. This sequence can appear not in order. Furthermore, the question states that we need to do this in O(n) time.
+Initial Thoughts At first glance the only thing that makes this problem non-trivial is the time requirement. O(n). Sorting the list would make the question much easier but since that is a O(nlogn) operation that is not an option." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://antdon.me/posts/longest-consecutive-sequence/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-05T16:21:42&#43;10:00" />
+<meta property="article:modified_time" content="2022-07-05T16:21:42&#43;10:00" /><meta property="og:site_name" content="Anton&#39;s Daily Algorithm" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Longest Consecutive Sequence"/>
@@ -52,102 +43,108 @@ Initial Thoughts At first glance the only thing that makes this problem non-triv
 Initial Thoughts At first glance the only thing that makes this problem non-trivial is the time requirement. O(n). Sorting the list would make the question much easier but since that is a O(nlogn) operation that is not an option."/>
 
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Longest Consecutive Sequence",
+      "item": "https://antdon.me/posts/longest-consecutive-sequence/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Longest Consecutive Sequence",
+  "name": "Longest Consecutive Sequence",
+  "description": "Longest Consecutive Sequence Problem Explanation The question provides you with an unsorted array and you need to find the longest consecutive sequence within it. This sequence can appear not in order. Furthermore, the question states that we need to do this in O(n) time.\nInitial Thoughts At first glance the only thing that makes this problem non-trivial is the time requirement. O(n). Sorting the list would make the question much easier but since that is a O(nlogn) operation that is not an option.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Longest Consecutive Sequence Problem Explanation The question provides you with an unsorted array and you need to find the longest consecutive sequence within it. This sequence can appear not in order. Furthermore, the question states that we need to do this in O(n) time.\nInitial Thoughts At first glance the only thing that makes this problem non-trivial is the time requirement. O(n). Sorting the list would make the question much easier but since that is a O(nlogn) operation that is not an option. Furthermore, looking up the successor of each element doesn’t have a good enough stopping condition to make it any better than O(n^2).\nSolution One key to this question is that if an element occurs more than once that does not affect the solution. This means we can use a set rather than a list\nnums = set(nums) This gives us two advantages. Sets have fewer elements in them than lists as all duplicates have been removed and all set operations can be done in O(1) time as a concequence of the hashing protocol that sets use. You can read more about that here. However, if we have a list in reverse order and we check the sublist starting on each element we will end up having to go through the elements n^2 times.\nThe answer is to check if an element is the start of a consecutive sequence or within one. If it’s the start we can find the length of the sequence the element begins, if not we can move to the next element. Each time we should compare the length of our consecutive sequence with our longest sequence so far and update our longest variable.\nclass Solution: def longestConsecutive(self, nums: List[int]) - int: nums = set(nums) longest = 0 for num in nums: if not (num - 1) in nums: tmp = num count = 0 while tmp in nums: count += 1 tmp += 1 if count  longest: longest = count return longest There are slight optimisations that can be made to save on space but they sacrifice readability.\n",
+  "wordCount" : "346",
+  "inLanguage": "en",
+  "datePublished": "2022-07-05T16:21:42+10:00",
+  "dateModified": "2022-07-05T16:21:42+10:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://antdon.me/posts/longest-consecutive-sequence/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Anton's Daily Algorithm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://antdon.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
 
-<meta property="og:title" content="Longest Consecutive Sequence" />
-<meta property="og:description" content="Longest Consecutive Sequence Problem Explanation The question provides you with an unsorted array and you need to find the longest consecutive sequence within it. This sequence can appear not in order. Furthermore, the question states that we need to do this in O(n) time.
-Initial Thoughts At first glance the only thing that makes this problem non-trivial is the time requirement. O(n). Sorting the list would make the question much easier but since that is a O(nlogn) operation that is not an option." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://antdon.me/posts/longest-consecutive-sequence/" />
-<meta property="article:published_time" content="2022-07-05T16:21:42+10:00" />
-<meta property="article:modified_time" content="2022-07-05T16:21:42+10:00" /><meta property="og:site_name" content="Anton&#39;s Daily Algorithm" />
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    }
 
+</script>
 
-
-
-
-
-  </head>
-  <body class="light-theme">
-    <div class="container">
-      <header class="header">
-  <span class="header__inner">
-    <a
-  href="https://antdon.me"
-  class="logo"
-  style="text-decoration: none;"
->
-  
-    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
-  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
-</svg>
-</span>
-    <span class="logo__text"
-      >Anton&#39;s Algorithims</span
-    >
-    <span class="logo__cursor"></span>
-  
-</a>
-
-    <span class="header__right">
-      
-      <span class="theme-toggle">
-        <svg
-  class="theme-toggler"
-  width="24"
-  height="24"
-  viewBox="0 0 48 48"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
-  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
-  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
-  />
-</svg>
-
-      </span>
-    </span>
-  </span>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://antdon.me" accesskey="h" title="Anton&#39;s Daily Algorithm (Alt + H)">Anton&#39;s Daily Algorithm</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
 </header>
+<main class="main">
 
-
-      <div class="content">
-        
-  
-  
-
-  <div class="post">
-    <h1 class="post-title">Longest Consecutive Sequence</h1>
-    <div class="post-meta">
-      
-        <span class="post-date">
-          2022-07-05
-        </span>
-
-        
-          
-        
-      
-
-      
-
-
-      
-    </div>
-
+<article class="post-single">
+  <header class="post-header">
     
+    <h1 class="post-title">
+      Longest Consecutive Sequence
+    </h1>
+    <div class="post-meta"><span title='2022-07-05 16:21:42 +1000 AEST'>July 5, 2022</span>
 
-    
-
-    <div class="post-content">
-      
-      <h1 id="longest-consecutive-sequence">Longest Consecutive Sequence</h1>
-<h2 id="problem-explanation">Problem Explanation</h2>
+</div>
+  </header> 
+  <div class="post-content"><h1 id="longest-consecutive-sequence">Longest Consecutive Sequence<a hidden class="anchor" aria-hidden="true" href="#longest-consecutive-sequence">#</a></h1>
+<h2 id="problem-explanation">Problem Explanation<a hidden class="anchor" aria-hidden="true" href="#problem-explanation">#</a></h2>
 <p>The question provides you with an unsorted array and you need to find the longest consecutive sequence within it. This sequence can appear not in order. Furthermore, the question states that we need to do this in O(n) time.</p>
-<h2 id="initial-thoughts">Initial Thoughts</h2>
+<h2 id="initial-thoughts">Initial Thoughts<a hidden class="anchor" aria-hidden="true" href="#initial-thoughts">#</a></h2>
 <p>At first glance the only thing that makes this problem non-trivial is the time requirement. O(n). Sorting the list would make the question much easier but since that is a O(nlogn) operation that is not an option. Furthermore, looking up the successor of each element doesn&rsquo;t have a good enough stopping condition to make it any better than O(n^2).</p>
-<h2 id="solution">Solution</h2>
+<h2 id="solution">Solution<a hidden class="anchor" aria-hidden="true" href="#solution">#</a></h2>
 <p>One key to this question is that if an element occurs more than once that does not affect the solution. This means we can use a set rather than a list</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">nums <span style="color:#f92672">=</span> set(nums)
 </code></pre></div><p>This gives us two advantages. Sets have fewer elements in them than lists as all duplicates have been removed and all set operations can be done in O(1) time as a concequence of the hashing protocol that sets use. You can read more about that <a href="https://wiki.python.org/moin/TimeComplexity">here</a>.
@@ -170,90 +167,84 @@ Each time we should compare the length of our consecutive sequence with our long
         <span style="color:#66d9ef">return</span> longest
 </code></pre></div><p>There are slight optimisations that can be made to save on space but they sacrifice readability.</p>
 
-    </div>
-    
-      
-        <div class="pagination">
-          <div class="pagination__title">
-            <span class="pagination__title-h"
-              >Read other posts</span
-            >
-            <hr />
-          </div>
-          <div class="pagination__buttons">
-            
-              <span class="button previous">
-                <a href="https://antdon.me/posts/fibbonacci-number/">
-                  <span class="button__icon">←</span>
-                  <span class="button__text">Fibbonacci Numbers</span>
-                </a>
-              </span>
-            
-            
-              <span class="button next">
-                <a href="https://antdon.me/posts/maximum-units-on-a-truck/">
-                  <span class="button__text">Maximum Units on a Truck</span>
-                  <span class="button__icon">→</span>
-                </a>
-              </span>
-            
-          </div>
-        </div>
-      
-    
 
-    
-      
-        
-
-      
-    
   </div>
 
-      </div>
-
-      
-        <footer class="footer">
-  <div class="footer__inner">
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
     
-      <a
-  href="https://antdon.me"
-  class="logo"
-  style="text-decoration: none;"
->
-  
-    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
-  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
-</svg>
-</span>
-    <span class="logo__text"
-      >Anton&#39;s Algorithims</span
-    >
-    <span class="logo__cursor"></span>
-  
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://antdon.me">Anton&#39;s Daily Algorithm</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
 </a>
 
-      <div class="copyright">
-        <span
-          >© 2022 Powered by
-          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span
-        >
-        <span
-          >Theme created by
-          <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span
-        >
-      </div>
-    
-  </div>
-</footer>
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
 
-<script src="https://antdon.me/assets/main.js"></script>
-<script src="https://antdon.me/assets/prism.js"></script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
 
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
-      
-    </div>
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-    
-  </body>
+</script>
+</body>
+
 </html>

@@ -1,52 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    
-      <title>
-        Fibbonacci Numbers ::
-        Anton&#39;s Daily Algorithm — A simple theme for Hugo
-      </title>
-    
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta
-  name="description"
-  content="link to problem
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Fibbonacci Numbers | Anton&#39;s Daily Algorithm</title>
+<meta name="keywords" content="algorithms, code">
+<meta name="description" content="link to problem
 Problem explanation The problem is asking us to return the respective fibbonacci number of the input. Where the output should be given by the function f(0) = 0, f(1) = 1, f(n) = f(n-1) &#43; f(n-2).
 Solution This is a common example of a problem that is best solved using recursion. We start by defining our base cases.
-if n == 0: return 0 elif n == 1: return 1 These are our stop conditions."
-/>
-<meta
-  name="keywords"
-  content=""
-/>
-<meta name="robots" content="noodp" />
-<link rel="canonical" href="https://antdon.me/posts/fibbonacci-number/" />
+if n == 0: return 0 elif n == 1: return 1 These are our stop conditions.">
+<meta name="author" content="">
+<link rel="canonical" href="https://antdon.me/posts/fibbonacci-number/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.41f2d211c00e636a3c229c52ef2d4299a66891ae66771098993b13bca7972ae6.css" integrity="sha256-QfLSEcAOY2o8IpxS7y1CmaZoka5mdxCYmTsTvKeXKuY=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://antdon.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://antdon.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://antdon.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://antdon.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://antdon.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-
-
-
-
-<link rel="stylesheet" href="https://antdon.me/assets/style.css" />
-
-<link rel="stylesheet" href="https://antdon.me/style.css" />
-
-
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="144x144"
-  href="https://antdon.me/img/apple-touch-icon-144-precomposed.png"
-/>
-<link rel="shortcut icon" href="https://antdon.me/img/favicon.png" />
-
-
-<link href="https://antdon.me/assets/fonts/Inter-Italic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="https://antdon.me/assets/fonts/Inter-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="https://antdon.me/assets/fonts/Inter-Medium.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="https://antdon.me/assets/fonts/Inter-MediumItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="https://antdon.me/assets/fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="https://antdon.me/assets/fonts/Inter-BoldItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
-
+    </style>
+</noscript><meta property="og:title" content="Fibbonacci Numbers" />
+<meta property="og:description" content="link to problem
+Problem explanation The problem is asking us to return the respective fibbonacci number of the input. Where the output should be given by the function f(0) = 0, f(1) = 1, f(n) = f(n-1) &#43; f(n-2).
+Solution This is a common example of a problem that is best solved using recursion. We start by defining our base cases.
+if n == 0: return 0 elif n == 1: return 1 These are our stop conditions." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://antdon.me/posts/fibbonacci-number/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-06T16:52:11&#43;10:00" />
+<meta property="article:modified_time" content="2022-07-06T16:52:11&#43;10:00" /><meta property="og:site_name" content="Anton&#39;s Daily Algorithm" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Fibbonacci Numbers"/>
@@ -56,110 +49,106 @@ Solution This is a common example of a problem that is best solved using recursi
 if n == 0: return 0 elif n == 1: return 1 These are our stop conditions."/>
 
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Fibbonacci Numbers",
+      "item": "https://antdon.me/posts/fibbonacci-number/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Fibbonacci Numbers",
+  "name": "Fibbonacci Numbers",
+  "description": "link to problem\nProblem explanation The problem is asking us to return the respective fibbonacci number of the input. Where the output should be given by the function f(0) = 0, f(1) = 1, f(n) = f(n-1) + f(n-2).\nSolution This is a common example of a problem that is best solved using recursion. We start by defining our base cases.\nif n == 0: return 0 elif n == 1: return 1 These are our stop conditions.",
+  "keywords": [
+    "algorithms", "code"
+  ],
+  "articleBody": "link to problem\nProblem explanation The problem is asking us to return the respective fibbonacci number of the input. Where the output should be given by the function f(0) = 0, f(1) = 1, f(n) = f(n-1) + f(n-2).\nSolution This is a common example of a problem that is best solved using recursion. We start by defining our base cases.\nif n == 0: return 0 elif n == 1: return 1 These are our stop conditions. The bottom of the tower of recursive calls that we are building. Next we want to do our recursive case that is essentially spelt out in the problem statement.\nelse: return self.fib(n-1) + self.fib(n-2) Here we are calling fib inside of fib. But each time we are reducing n and hence we will eventually hit our base case. This works by building up slowly take n = 7 for example\nfib(7) = fib(6) + fib(5) fib(7) = (fib(5) + fib(3)) + (fib(4) + fib(2)) fib(7) = ((fib(4) + fib(3)) + fib(2) + fib(1)) + ((fib(3) + fib(2)) + (fib(1) + fib(0))) …\nI’m sure I’ve already messed up my bracktes but I’m sure you can see the pattern. Each fib call breaks into two more fib calls with smaller n values until it eventually reaches either fib(1) or fib(0). When we reach these base cases we can sub in 1 and 0 respectively and finally do our addition. Gaining a intuition for writing such algorithms is tricky and will take time but as long as you first define the base case and then make sure that the recursive case is reducing each time you can trust that your algorithm will eventually resolve.\nclass Solution: def fib(self, n: int) - int: if n == 0: return 0 elif n == 1: return 1 else: return self.fib(n-1) + self.fib(n-2) Optimisation If we look at the example of fib(7) above we can see that many numbers are repeated. In the last line I attempted fib(3) occurs twice. Each time we are breaking fib(3) up into fin(2) and fib(1) although we have already done this computation. Essentially if we could store the values that we have already calculated we could only have to calculate them once and then we can reuse them.\nclass Solution: def fib(self, n: int) - int: hash_map ={} def f(n): if(hash_map.get(n,-1)!=-1): return hash_map[n] if(n==0 or n==1): hash_map[n] = n return hash_map[n] hash_map[n] = f(n-1)+f(n-2) return hash_map[n] return f(n) The below code stores them in a hashtable. It first declares the hashtable and then its recursive helper function. Each iteration it first checks if the value is stored in the table.\nThis is done with some fun syntax where the second argument of get is a default value that is returned if the value is not found in the table. Hence get(n, -1) checks if n is in the hashmap and if not it returns -1, a value that could not be returned by any n).\nThen it checks for base cases. And finally the recursive call, however this time assigning the recursive calls value to the value of n in their hashmap so that they look it up if the need it again later. It’s important to understand that hashmaps have O(1) lookup in the average case, you can read more about that here.\nThis type of saving the values of recursive calls is a common operation and is needed to speed up a lot of functional programming. So the good folks who make python created a handy decorator that you can add to your regular shmegular functions.\nimport functools class Solution: @functools.cache def fib(self, n: int) - int: if n == 0: return 0 elif n == 1: return 1 else: return self.fib(n-1) + self.fib(n-2) This function will perform aprox as well as the solution with hashing and required far less typing.\n",
+  "wordCount" : "641",
+  "inLanguage": "en",
+  "datePublished": "2022-07-06T16:52:11+10:00",
+  "dateModified": "2022-07-06T16:52:11+10:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://antdon.me/posts/fibbonacci-number/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Anton's Daily Algorithm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://antdon.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
 
-<meta property="og:title" content="Fibbonacci Numbers" />
-<meta property="og:description" content="link to problem
-Problem explanation The problem is asking us to return the respective fibbonacci number of the input. Where the output should be given by the function f(0) = 0, f(1) = 1, f(n) = f(n-1) &#43; f(n-2).
-Solution This is a common example of a problem that is best solved using recursion. We start by defining our base cases.
-if n == 0: return 0 elif n == 1: return 1 These are our stop conditions." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://antdon.me/posts/fibbonacci-number/" />
-<meta property="article:published_time" content="2022-07-06T16:52:11+10:00" />
-<meta property="article:modified_time" content="2022-07-06T16:52:11+10:00" /><meta property="og:site_name" content="Anton&#39;s Daily Algorithm" />
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    }
 
+</script>
 
-
-
-
-
-  </head>
-  <body class="light-theme">
-    <div class="container">
-      <header class="header">
-  <span class="header__inner">
-    <a
-  href="https://antdon.me"
-  class="logo"
-  style="text-decoration: none;"
->
-  
-    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
-  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
-</svg>
-</span>
-    <span class="logo__text"
-      >Anton&#39;s Algorithims</span
-    >
-    <span class="logo__cursor"></span>
-  
-</a>
-
-    <span class="header__right">
-      
-      <span class="theme-toggle">
-        <svg
-  class="theme-toggler"
-  width="24"
-  height="24"
-  viewBox="0 0 48 48"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
-  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
-  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
-  />
-</svg>
-
-      </span>
-    </span>
-  </span>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://antdon.me" accesskey="h" title="Anton&#39;s Daily Algorithm (Alt + H)">Anton&#39;s Daily Algorithm</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
 </header>
+<main class="main">
 
-
-      <div class="content">
-        
-  
-  
-
-  <div class="post">
-    <h1 class="post-title">Fibbonacci Numbers</h1>
-    <div class="post-meta">
-      
-        <span class="post-date">
-          2022-07-06
-        </span>
-
-        
-          
-        
-      
-
-      
-
-
-      
-    </div>
-
+<article class="post-single">
+  <header class="post-header">
     
-      <span class="post-tags">
-        
-          <a href="https://antdon.me/tags/algorithms/">#algorithms</a>&nbsp;
-        
-          <a href="https://antdon.me/tags/code/">#code</a>&nbsp;
-        
-      </span>
-    
+    <h1 class="post-title">
+      Fibbonacci Numbers
+    </h1>
+    <div class="post-meta"><span title='2022-07-06 16:52:11 +1000 AEST'>July 6, 2022</span>
 
-    
-
-    <div class="post-content">
-      
-      <p><a href="https://leetcode.com/problems/fibonacci-number/">link to problem</a></p>
-<h2 id="problem-explanation">Problem explanation</h2>
+</div>
+  </header> 
+  <div class="post-content"><p><a href="https://leetcode.com/problems/fibonacci-number/">link to problem</a></p>
+<h2 id="problem-explanation">Problem explanation<a hidden class="anchor" aria-hidden="true" href="#problem-explanation">#</a></h2>
 <p>The problem is asking us to return the respective fibbonacci number of the input. Where the output should be given by the function f(0) = 0, f(1) = 1, f(n) = f(n-1) + f(n-2).</p>
-<h2 id="solution">Solution</h2>
+<h2 id="solution">Solution<a hidden class="anchor" aria-hidden="true" href="#solution">#</a></h2>
 <p>This is a common example of a problem that is best solved using recursion. We start by defining our base cases.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
 	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
@@ -184,7 +173,7 @@ Gaining a intuition for writing such algorithms is tricky and will take time but
             <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
         <span style="color:#66d9ef">else</span>:
             <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>fib(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>fib(n<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>)
-</code></pre></div><h2 id="optimisation">Optimisation</h2>
+</code></pre></div><h2 id="optimisation">Optimisation<a hidden class="anchor" aria-hidden="true" href="#optimisation">#</a></h2>
 <p>If we look at the example of fib(7) above we can see that many numbers are repeated. In the last line I attempted fib(3) occurs twice. Each time we are breaking fib(3) up into fin(2) and fib(1) although we have already done this computation. Essentially if we could store the values that we have already calculated we could only have to calculate them once and then we can reuse them.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fib</span>(self, n: int) <span style="color:#f92672">-&gt;</span> int:
@@ -218,83 +207,86 @@ Gaining a intuition for writing such algorithms is tricky and will take time but
             <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>fib(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>fib(n<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>)
 </code></pre></div><p>This function will perform aprox as well as the solution with hashing and required far less typing.</p>
 
-    </div>
-    
-      
-        <div class="pagination">
-          <div class="pagination__title">
-            <span class="pagination__title-h"
-              >Read other posts</span
-            >
-            <hr />
-          </div>
-          <div class="pagination__buttons">
-            
-            
-              <span class="button next">
-                <a href="https://antdon.me/posts/longest-consecutive-sequence/">
-                  <span class="button__text">Longest Consecutive Sequence</span>
-                  <span class="button__icon">→</span>
-                </a>
-              </span>
-            
-          </div>
-        </div>
-      
-    
 
-    
-      
-        
-
-      
-    
   </div>
 
-      </div>
-
-      
-        <footer class="footer">
-  <div class="footer__inner">
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://antdon.me/tags/algorithms/">algorithms</a></li>
+      <li><a href="https://antdon.me/tags/code/">code</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
     
-      <a
-  href="https://antdon.me"
-  class="logo"
-  style="text-decoration: none;"
->
-  
-    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
-  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
-</svg>
-</span>
-    <span class="logo__text"
-      >Anton&#39;s Algorithims</span
-    >
-    <span class="logo__cursor"></span>
-  
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://antdon.me">Anton&#39;s Daily Algorithm</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
 </a>
 
-      <div class="copyright">
-        <span
-          >© 2022 Powered by
-          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span
-        >
-        <span
-          >Theme created by
-          <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span
-        >
-      </div>
-    
-  </div>
-</footer>
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
 
-<script src="https://antdon.me/assets/main.js"></script>
-<script src="https://antdon.me/assets/prism.js"></script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
 
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
-      
-    </div>
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-    
-  </body>
+</script>
+</body>
+
 </html>
